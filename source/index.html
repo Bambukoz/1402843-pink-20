@@ -1,12 +1,194 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-  </body>
+<body>
+  <header class="page-header">
+    <div class="page-header__top">
+      <nav class="main-nav">
+        <a class="main-nav__logo"></a>
+        <button class="main-nav__close" type="button"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Фотографии</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="form.html">Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Html Acadeny</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <h1 class="page-main__title visually-hidden">Приложение для фотографий</h1>
+    <section class="page-main__download download">
+      <h2 class="download__title">Взгляните на жизнь иначе!</h2>
+      <a class="download-btn btn" href="#">Скачать приложение</a>
+      <ul class="download__list">
+        <li class="download__item">
+          <a href="#" aria-label="Скачать из App Store"></a>
+        </li>
+        <li class="download__item" aria-label="Скачать из Google Store">
+          <a href="#"></a>
+        </li>
+        <li class="download__item" aria-label="Скачать из Windows Store">
+          <a href="#"></a>
+        </li>
+      </ul>
+      <p class="download__description">
+        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+      </p>
+    </section>
+    <section class="page-main__features features">
+      <h2 class="features__title">Устали от серости мегаполиса?<br><br>Нам есть, что вам предложить!</h2>
+      <ul class="features__list">
+        <li class="features__item">
+          <h3>Поднимает настроение</h3>
+          <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </li>
+        <li class="features__item">
+          <h3>Меняет мир вокруг</h3>
+          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </li>
+        <li class="features__item">
+          <h3>Заводит новых друзей</h3>
+          <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+        </li>
+      </ul>
+    </section>
+    <!-- <section class="page-main__recall recall">
+      <h2 class="recall__title visually-hidden">Отзывы пользователей</h2>
+      <blockquote class="recall__item">
+        <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        <cite>Николай Петров</cite>
+      </blockquote>
+      <div class="recall__toggle-group">
+        <button class="recall__toggle recall__toggle--active" type="button" aria-label="Отзыв от пользователя"></button>
+        <button class="recall__toggle" type="button" aria-label="Отзыв от пользователя"></button>
+        <button class="recall__toggle" type="button" aria-label="Отзыв от пользователя"></button>
+      </div>
+    </section>
+    <section class="page-main__rates rates">
+      <h2 class="rates__title visually-hidden">Тарифы</h2>
+      <table class="rates__table table-rates">
+        <tr class="table-rates__tr">
+          <th class="table-rates__th table-rates__th--empty">
+            </td>
+          <th class="table-rates__th">
+            <span>База</span>
+            <span>1,99 USD</span>
+          </th>
+          <th class="table-rates__th">
+            <span>Стандарт</span>
+            <span>3,99 USD</span>
+          </th>
+          <th class="table-rates__th">
+            <span>Анлим</span>
+            <span>9,99 USD</span>
+          </th>
+        </tr>
+        <tr class="table-rates__tr">
+          <td class="table-rates__td">
+            <span>Розовый фильтр</span>
+          </td>
+          <td class="table-rates__td">
+            <span aria-label="В наличии"></span>
+          </td>
+          <td class="table-rates__td">
+            <span aria-label="В наличии"></span>
+          </td>
+          <td class="table-rates__td">
+            <span aria-label="В наличии"></span>
+          </td>
+        </tr>
+        <tr class="table-rates__tr">
+          <td class="table-rates__td">
+            <span>Смайлики</span>
+          </td>
+          <td class="table-rates__td">
+            <span aria-label="Нет в наличии"></span>
+          </td>
+          <td class="table-rates__td">
+            <span aria-label="В наличии"></span>
+          </td>
+          <td class="table-rates__td">
+            <span aria-label="В наличии"></span>
+          </td>
+        </tr>
+        <tr class="table-rates__tr">
+          <td class="table-rates__td">
+            <span>Комментарии</span>
+          </td>
+          <td class="table-rates__td">
+            <span aria-label="Нет в наличии"></span>
+          </td>
+          <td class="table-rates__td">
+            <span aria-label="Нет в наличии"></span>
+          </td>
+          <td class="table-rates__td">
+            <span aria-label="В наличии"></span>
+          </td>
+        </tr>
+      </table>
+      <div class="rates__toggle-group">
+        <button class="rates__toggle" aria-label="Тариф - базовый"></button>
+        <button class="rates__toggle rates__toggle--active" aria-label="Тариф - стандарт"></button>
+        <button class="rates__toggle" aria-label="Тариф - анлим"></button>
+      </div>
+    </section>
+    <section class="page-main__contacts contacts">
+      <h2 class="contacts__title">Остались вопросы?<br>Свяжитесь с нами!</h2>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <h3>Звоните:</h3>
+          <a href="tel:+78125556666">8&nbsp;812&nbsp;555-66-66</a>
+        </li>
+        <li class="contacts__item">
+          <h3>Пишите:</h3>
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </li>
+        <li class="contacts__item">
+          <h3>Приезжайте в гости:</h3>
+          <address>ул. Большая Конюшенная, 19/8</address>
+        </li>
+      </ul>
+      <div class="contacts__map"></div>
+    </section> -->
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__logo">
+      <a aria-label="Логотип Pink"></a>
+    </div>
+    <ul class="page-footer__social social social__list">
+      <li class="social__item">
+        <a class="social__link social__link--twitter" href="#" aria-label="Twitter"></a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--facebook" href="#" aria-label="Facebook"></a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--youtube" href="#" aria-label="YouTube"></a>
+      </li>
+    </ul>
+    <div class="page-footer__copyright copyright">
+      <span class="copyright__text">Разработано</span>
+      <a class="copyright__link" aria-label="Html Academy"></a>
+    </div>
+  </footer>
+
+</body>
+
 </html>
