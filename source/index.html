@@ -4,73 +4,91 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
-  <header class="page-header">
-    <div class="page-header__top">
+<body class="page">
+  <header class="page__header header">
+    <div class="header__top">
       <nav class="main-nav">
-        <a class="main-nav__logo"></a>
-        <button class="main-nav__close" type="button"></button>
+        <a class="main-nav__link">
+          <img class="main-nav__logo" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип Pink">
+        </a>
+        <button class="main-nav__close-btn" type="button" aria-label="Закрыть меню"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="#">Главная</a>
+            <a class="main-nav__link">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Фотографии</a>
+            <a class="main-nav__link" href="photo.html">Фотографии</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">Конкурс</a>
+            <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Html Acadeny</a>
+            <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="page-main">
-    <h1 class="page-main__title visually-hidden">Приложение для фотографий</h1>
-    <section class="page-main__download download">
+  <main class="page__main main">
+    <h1 class="main__title">Приложение для фотографий</h1>
+    <section class="main__download">
       <h2 class="download__title">Взгляните на жизнь иначе!</h2>
-      <a class="download-btn btn" href="#">Скачать приложение</a>
+      <a class="download__btn btn" href="#">Скачать приложение</a>
       <ul class="download__list">
         <li class="download__item">
-          <a href="#" aria-label="Скачать из App Store"></a>
+          <a class="download__link" href="#" aria-label="Скачать из App Store"></a>
         </li>
-        <li class="download__item" aria-label="Скачать из Google Store">
-          <a href="#"></a>
+        <li class="download__item">
+          <a class="download__link" href="#" aria-label="Скачать из Google Store"></a>
         </li>
-        <li class="download__item" aria-label="Скачать из Windows Store">
-          <a href="#"></a>
+        <li class="download__item">
+          <a class="download__link" href="#" aria-label="Скачать из Windows Store"></a>
         </li>
       </ul>
-      <p class="download__description">
-        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-      </p>
+      <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
     </section>
-    <section class="page-main__features features">
+
+    <section class="main__features features">
       <h2 class="features__title">Устали от серости мегаполиса?<br><br>Нам есть, что вам предложить!</h2>
       <ul class="features__list">
         <li class="features__item">
+          <picture class="features__image features__image--gray">
+            <img src="https://via.placeholder.com/136x245" width="136" height="245" alt="Телефон с черно-белым фото">
+          </picture>
           <h3>Поднимает настроение</h3>
           <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
         </li>
         <li class="features__item">
+          <picture class="features__image features__image--pink">
+            <img src="https://via.placeholder.com/136x245" width="136" height="245" alt="Телефон с розовым фото">
+          </picture>
           <h3>Меняет мир вокруг</h3>
           <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
         </li>
         <li class="features__item">
+          <picture class="features__image features__image--smile">
+            <img src="https://via.placeholder.com/136x245" width="136" height="245" alt="Телефон со смайликом фото">
+          </picture>
           <h3>Заводит новых друзей</h3>
           <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
         </li>
+        <li class="features__item features__item--clock">
+          <picture class="features__image features__image--clock">
+            <img src="https://via.placeholder.com/238x276" width="238" height="276" alt="Часы">
+          </picture>
+          <h3>Эффект на 24 часа!</h3>
+          <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        </li>
       </ul>
     </section>
-    <!-- <section class="page-main__recall recall">
-      <h2 class="recall__title visually-hidden">Отзывы пользователей</h2>
+
+    <section class="main__recall recall">
+      <h2 class="recall__title">Отзывы пользователей</h2>
       <blockquote class="recall__item">
         <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         <cite>Николай Петров</cite>
@@ -81,12 +99,12 @@
         <button class="recall__toggle" type="button" aria-label="Отзыв от пользователя"></button>
       </div>
     </section>
+
     <section class="page-main__rates rates">
-      <h2 class="rates__title visually-hidden">Тарифы</h2>
+      <h2 class="rates__title">Тарифы</h2>
       <table class="rates__table table-rates">
         <tr class="table-rates__tr">
-          <th class="table-rates__th table-rates__th--empty">
-            </td>
+          <th class="table-rates__th table-rates__th--empty"></th>
           <th class="table-rates__th">
             <span>База</span>
             <span>1,99 USD</span>
@@ -105,13 +123,13 @@
             <span>Розовый фильтр</span>
           </td>
           <td class="table-rates__td">
-            <span aria-label="В наличии"></span>
+            <span>В наличии</span>
           </td>
           <td class="table-rates__td">
-            <span aria-label="В наличии"></span>
+            <span>В наличии</span>
           </td>
           <td class="table-rates__td">
-            <span aria-label="В наличии"></span>
+            <span>В наличии</span>
           </td>
         </tr>
         <tr class="table-rates__tr">
@@ -119,13 +137,13 @@
             <span>Смайлики</span>
           </td>
           <td class="table-rates__td">
-            <span aria-label="Нет в наличии"></span>
+            <span>Нет в наличии</span>
           </td>
           <td class="table-rates__td">
-            <span aria-label="В наличии"></span>
+            <span>В наличии</span>
           </td>
           <td class="table-rates__td">
-            <span aria-label="В наличии"></span>
+            <span>В наличии</span>
           </td>
         </tr>
         <tr class="table-rates__tr">
@@ -133,13 +151,13 @@
             <span>Комментарии</span>
           </td>
           <td class="table-rates__td">
-            <span aria-label="Нет в наличии"></span>
+            <span>Нет в наличии</span>
           </td>
           <td class="table-rates__td">
-            <span aria-label="Нет в наличии"></span>
+            <span>Нет в наличии</span>
           </td>
           <td class="table-rates__td">
-            <span aria-label="В наличии"></span>
+            <span>В наличии</span>
           </td>
         </tr>
       </table>
@@ -149,6 +167,7 @@
         <button class="rates__toggle" aria-label="Тариф - анлим"></button>
       </div>
     </section>
+
     <section class="page-main__contacts contacts">
       <h2 class="contacts__title">Остались вопросы?<br>Свяжитесь с нами!</h2>
       <ul class="contacts__list">
@@ -166,13 +185,16 @@
         </li>
       </ul>
       <div class="contacts__map"></div>
-    </section> -->
+    </section>
   </main>
-  <footer class="page-footer">
-    <div class="page-footer__logo">
-      <a aria-label="Логотип Pink"></a>
+
+  <footer class="page__footer footer">
+    <div class="footer__logo">
+      <a class="footer__link" href="#">
+        <img src="https://via.placeholder.com/145x40" width="145" height="40" alt="Логотип Pink">
+      </a>
     </div>
-    <ul class="page-footer__social social social__list">
+    <ul class="footer__social social">
       <li class="social__item">
         <a class="social__link social__link--twitter" href="#" aria-label="Twitter"></a>
       </li>
@@ -183,9 +205,11 @@
         <a class="social__link social__link--youtube" href="#" aria-label="YouTube"></a>
       </li>
     </ul>
-    <div class="page-footer__copyright copyright">
+    <div class="footer__copyright copyright">
       <span class="copyright__text">Разработано</span>
-      <a class="copyright__link" aria-label="Html Academy"></a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="https://via.placeholder.com/27x34" width="27" heigth="34" alt="Html Academy">
+      </a>
     </div>
   </footer>
 

@@ -4,158 +4,203 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
-  <header class="page-header">
-    <div class="page-header__top">
+<body class="page">
+  <header class="page__header header">
+    <div class="header__top">
       <nav class="main-nav">
-        <a class="main-nav__logo"></a>
-        <button class="main-nav__close" type="button"></button>
+        <a class="main-nav__link" href="index.html">
+          <img class="main-nav__logo" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип Pink">
+        </a>
+        <button class="main-nav__close-btn" type="button" aria-label="Закрыть меню"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="#">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Фотографии</a>
+            <a class="main-nav__link">Фотографии</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">Конкурс</a>
+            <a class="main-nav__link" href="form.html">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Html Acadeny</a>
+            <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="page-main">
-    <h1 class="page-main__title visually-hidden">Страничка, где вы можете поделиться своими фото!</h1>
-    <section class="page-main__photography photography">
+  <main class="page__main main">
+    <h1 class="main__title">Страничка, где вы можете поделиться своими фото!</h1>
+    <div class="main__photography photography">
       <h2 class="photography__title">Фотографии пользователей</h2>
       <p class="photography__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
       <article class="photography__post post">
-        <a href="#">
-          <img src="https://via.placeholder.com/150x150" alt="Тут будет фото">
+        <h3 class="post__title">Пост с фотографией</h3>
+        <a class="post__link" href="#">
+          <picture>
+            <img src="https://via.placeholder.com/320x137" width="320" height="137" alt="Тут будет фото">
+          </picture>
+          <span class="post__rubrick">Панорама дня</span>
         </a>
         <blockquote class="post__description">
           <cite class="post__author">Анна</cite>
-          <span class="post__time">
-            &#40;5 минут назад&#41;
-          </span>
+          <span class="post__time">&#40;5 минут назад&#41;</span>
           <p class="post__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-          <a href="#">
-            <button class="btn like-btn" type="button">Лайк</button>
-            Нравится:
-            <span class="post__like-counter">
-              215
-            </span>
-          </a>
+          <button class="btn like-btn" type="button">Лайк</button>
+          Нравится:<span class="post__like-counter">215</span>
         </blockquote>
       </article>
 
       <article class="photography__post post">
-        <a href="#">
-          <img src="https://via.placeholder.com/150x150" alt="Тут будет фото">
+        <h3 class="post__title">Пост с фотографией</h3>
+        <a class="post__link" href="#">
+          <picture>
+            <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Тут будет фото">
+          </picture>
         </a>
         <blockquote class="post__description">
           <cite class="post__author">Левон</cite>
           <span class="podt__time">&#40;5 часов назад&#41;</span>
           <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-          <a href="#">
-            <button class="btn like-btn" type="button">Лайк</button>
-            Нравится: <span class="post__like-counter">356</span>
-          </a>
+          <button class="btn like-btn" type="button">Лайк</button>
+          Нравится: <span class="post__like-counter">356</span>
         </blockquote>
       </article>
-      <article class="photography__post">
-        <a href="#">
-          <img src="https://via.placeholder.com/150x150" alt="Тут будет фото">
+
+      <article class="photography__post post">
+        <h3 class="post__title">Пост с фотографией</h3>
+        <a class="post__link" href="#">
+          <picture>
+            <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Тут будет фото">
+          </picture>
         </a>
         <blockquote class="post__description">
           <cite class="post__author">Антон</cite>
           <span class="podt__time">&#40;12 часов назад&#41;</span>
           <p class="post__text">Соседи будут рады!</p>
-          <a href="#">
-            <button class="btn like-btn" type="button">Лайк</button>
-            Нравится: <span class="post__like-counter">666</span>
-          </a>
+          <button class="btn like-btn" type="button">Лайк</button>
+          Нравится: <span class="post__like-counter">666</span>
         </blockquote>
       </article>
 
-      <article class="photography__post">
-        <a href="#">
-          <img src="https://via.placeholder.com/150x150" alt="Тут будет фото">
+      <article class="photography__post post">
+        <h3 class="post__title">Пост с фотографией</h3>
+        <a class="post__link" href="#">
+          <picture>
+            <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Тут будет фото">
+          </picture>
         </a>
         <blockquote class="post__description">
           <cite class="post__author">Борис</cite>
           <span class="podt__time">&#40;20 часов назад&#41;</span>
           <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-          <a href="#">
-            <button class="btn like-btn" type="button">Лайк</button>
-            Нравится: <span class="post__like-counter">215</span>
-          </a>
+          <button class="btn like-btn" type="button">Лайк</button>
+          Нравится: <span class="post__like-counter">215</span>
         </blockquote>
       </article>
 
-      <article class="photography__post">
-        <a href="#">
-          <img src="https://via.placeholder.com/150x150" alt="Тут будет фото">
+      <article class="photography__post post">
+        <h3 class="post__title">Пост с фотографией</h3>
+        <a class="post__link" href="#">
+          <picture>
+            <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Тут будет фото">
+          </picture>
         </a>
         <blockquote class="post__description">
           <cite class="post__author">Сергей</cite>
           <span class="podt__time">&#40;25 часов назад&#41;</span>
           <p class="post__text">Самая кубанская в мире!</p>
-          <a href="#">
-            <button class="btn like-btn" type="button">Лайк</button>
-            Нравится: <span class="post__like-counter">4</span>
-          </a>
+          <button class="btn like-btn" type="button">Лайк</button>
+          Нравится: <span class="post__like-counter">4</span>
         </blockquote>
       </article>
 
-      <article class="photography__post">
-        <a href="#">
-          <img src="https://via.placeholder.com/150x150" alt="Тут будет фото">
+      <article class="photography__post post">
+        <h3 class="post__title">Пост с фотографией</h3>
+        <a class="post__link" href="#">
+          <picture>
+            <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Тут будет фото">
+          </picture>
         </a>
         <blockquote class="post__description">
           <cite class="post__author">Максим</cite>
           <span class="podt__time">&#40;40 часов назад&#41;</span>
           <p class="post__text">Где снег-то?</p>
-          <a href="#">
-            <button class="btn like-btn" type="button">Лайк</button>
-            Нравится: <span class="post__like-counter">150</span>
-          </a>
+          <button class="btn like-btn" type="button">Лайк</button>
+          Нравится: <span class="post__like-counter">150</span>
         </blockquote>
       </article>
 
-      <article class="photography__post">
-        <a href="#">
-          <img src="https://via.placeholder.com/150x150" alt="Тут будет фото">
+      <article class="photography__post post">
+        <h3 class="post__title">Пост с фотографией</h3>
+        <a class="post__link" href="#">
+          <picture>
+            <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Тут будет фото">
+          </picture>
         </a>
         <blockquote class="post__description">
           <cite class="post__author">Надежда</cite>
           <span class="podt__time">&#40;45 часов назад&#41;</span>
           <p class="post__text">Всем GM и взаимные лайки!</p>
-          <a href="#">
-            <button class="btn like-btn" type="button">Лайк</button>
-            Нравится: <span class="post__like-counter">2560</span>
-          </a>
+          <button class="btn like-btn" type="button">Лайк</button>
+          Нравится: <span class="post__like-counter">2560</span>
         </blockquote>
       </article>
 
       <p class="photography__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+    </div>
+
+    <section class="main__editor editor">
+      <h2 class="editor__title">Редактируй и выкладывай свои фото прямо сейчас</h2>
+      <div class="editor__window">
+        <picture>
+          <img src="https://via.placeholder.com/280x374" width="280" height="374" alt="Тут будет фото">
+        </picture>
+      </div>
+      <form class="editor__form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="editor__photo-crop">
+          <label class="editor__label" aria-label="Кадрирование">
+            <span class="editor__icon editor__icon--photo-crop">
+              <svg></svg>
+            </span>
+            <input class="editor__input" type="range" name="photo-crop" min="0" max="100" step="1">
+          </label>
+        </div>
+        <div class="editor__photo-fill">
+          <label class="editor__label" aria-label="Заливка">
+            <span class="editor__icon editor__icon--photo-fill">
+              <svg></svg>
+            </span>
+            <input class="editor__input" type="range" name="photo-fill" min="0" max="100" step="1">
+          </label>
+        </div>
+        <div class="editor__photo-contrast">
+          <label class="editor__label" aria-label="Контраст">
+            <span class="editor__icon editor__icon--photo-contrast">
+              <svg></svg>
+            </span>
+            <input class="editor__input" type="range" name="photo-contrast" min="0" max="100" step="1">
+          </label>
+        </div>
+        <button class="submit-btn btn" type="submit">Запостить</button>
+        <button class="cancel-btn btn" type="reset">Отмена</button>
+      </form>
     </section>
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__logo">
-      <a aria-label="Логотип Pink"></a>
+  <footer class="page__footer footer">
+    <div class="footer__logo">
+      <a class="footer__link" href="#">
+        <img src="https://via.placeholder.com/145x40" width="145" height="40" alt="Логотип Pink">
+      </a>
     </div>
-    <ul class="page-footer__social social social__list">
+    <ul class="footer__social social">
       <li class="social__item">
         <a class="social__link social__link--twitter" href="#" aria-label="Twitter"></a>
       </li>
@@ -166,9 +211,11 @@
         <a class="social__link social__link--youtube" href="#" aria-label="YouTube"></a>
       </li>
     </ul>
-    <div class="page-footer__copyright copyright">
+    <div class="footer__copyright copyright">
       <span class="copyright__text">Разработано</span>
-      <a class="copyright__link" aria-label="Html Academy"></a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="https://via.placeholder.com/27x34" width="27" heigth="34" alt="Html Academy">
+      </a>
     </div>
   </footer>
 
