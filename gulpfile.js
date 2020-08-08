@@ -5,12 +5,14 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const sassGlob = require('gulp-sass-glob');
 
 // Styles
 
 const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
+    .pipe(sassGlob())
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
