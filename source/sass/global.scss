@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+// body {
+//   font-family: $font;
+//   font-size: $font-size;
+//   line-height: $line-height;
+//   color: $color;
+//   background-color: $main-background;
+//   width: 100%;
+//   margin: 0;
+//   padding: 0;
+// }
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  font-size: 0;
+  line-height: 0;
+}
+
+svg,
+picture {
+  font-size: 0;
+  line-height: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
