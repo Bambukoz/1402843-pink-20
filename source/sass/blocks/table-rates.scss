@@ -1,0 +1,39 @@
+.table-rates {
+  border-collapse: collapse;
+
+  &__th {
+    border: 2px solid #E5E5E5;
+    background-color: $main-black;
+  }
+
+  &__th--empty {
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    background-color: transparent;
+  }
+
+  &__td {
+    border: 2px solid #E5E5E5;
+    color: $main-black;
+  }
+
+  &__status {
+    display: block;
+    text-indent: -1000px;
+    overflow: hidden;
+  }
+
+  &__status--on {
+    background-image: url("../../img/icon-yes.svg");
+    background-size: 31px 21px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__status--off {
+    background-size: 27px 27px;
+    background-image: url("../../img/icon-no.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

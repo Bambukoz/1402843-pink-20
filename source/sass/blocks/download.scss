@@ -1,0 +1,13 @@
+.download {
+  background-color: $background-black;
+
+  &__btn {
+    color: $white;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -3,16 +3,23 @@ html {
   height: 100%;
 }
 
-// body {
-//   font-family: $font;
-//   font-size: $font-size;
-//   line-height: $line-height;
-//   color: $color;
-//   background-color: $main-background;
-//   width: 100%;
-//   margin: 0;
-//   padding: 0;
-// }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: $line-height;
+  color: $white;
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+}
 
 a {
   text-decoration: none;
@@ -31,8 +38,6 @@ picture {
   line-height: 0;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+.visually-hidden {
+  @include visually-hidden;
 }
