@@ -1,0 +1,32 @@
+.form__list {
+  @include list-reset;
+}
+
+.form__label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $pink;
+
+  &--select {
+    line-height: 18px;
+  }
+}
+
+.form__input::placeholder {
+  color: $main-black;
+}
+
+.form__textarea {
+  resize: none;
+
+  &::placeholder {
+    color: $main-black;
+  }
+}
+
+.form__submit-btn {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+}

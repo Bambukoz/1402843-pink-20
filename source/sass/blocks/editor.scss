@@ -1,0 +1,15 @@
+.editor__btn {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $pink;
+  background-color: transparent;
+  border: 3px solid $pink;
+  border-radius: 30px;
+
+  &--disabled {
+    color: $main-black;
+    border-color: $main-black;
+    opacity: 0.1;
+  }
+}

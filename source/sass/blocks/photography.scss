@@ -1,0 +1,15 @@
+.photography__lead {
+  background-color: $background-black;
+}
+
+.photography__title {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 300;
+  @include style-reset;
+}
+
+.photography__text {
+  font-size: 14px;
+  color: $black;
+}

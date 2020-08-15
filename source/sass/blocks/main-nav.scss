@@ -1,13 +1,55 @@
 .main-nav {
-  background-color: rgba(0, 0, 0, 0.7);
+  display: block;
+  background-color: $main-black;
+}
 
-  &__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+.main-nav__toggle {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  width: 50px;
+  height: 24px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  padding: 0;
+}
 
-  &__link {
-    color: $white;
+.main-nav__toggle-burger {
+  display: none;
+
+  &--show {
+    display: block;
   }
+}
+
+.main-nav__toggle-cross {
+  display: none;
+
+  &--show {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.main-nav__list {
+  display: block;
+  text-align: center;
+  @include list-reset;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.main-nav__link {
+  display: block;
+  line-height: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  box-shadow: 0px 1px 0px #000000,
+    inset 0px 1px 0px rgba(255, 255, 255, 0.15);
+  padding: 16px 20px;
 }

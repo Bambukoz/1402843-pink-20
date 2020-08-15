@@ -9,13 +9,34 @@
 </head>
 
 <body class="page">
-  <header class="page__header header">
-    <div class="header__top">
+  <header class="page__header">
+    <div class="page__wrapper">
       <nav class="main-nav">
-        <a class="main-nav__link" href="index.html">
-          <img class="main-nav__logo" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип Pink">
+        <a class="main-nav__logo logo">
+          <picture>
+            <img src="../img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип Пинк">
+          </picture>
         </a>
-        <button class="main-nav__close-btn" type="button" aria-label="Закрыть меню"></button>
+        <button class="main-nav__toggle" type="button">
+          <svg class="main-nav__toggle-burger" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50" height="24" viewBox="0 0 49.945 24.007" enable-background="new 0 0 49.945 24.007" xml:space="preserve">
+            <g id="miu">
+              <g id="editor_list_view_hambuger_menu_glyph">
+                <g>
+                  <path id="path-1" fill="#FFFFFF"
+                    d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z" />
+                </g>
+                <g>
+                  <path id="path-1_1_" fill="#FFFFFF"
+                    d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <svg class="main-nav__toggle-cross main-nav__toggle-cross--show" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23" height="23" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
+            <path fill="#FFFFFF"
+              d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z" />
+          </svg>
+        </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
@@ -34,15 +55,13 @@
     </div>
   </header>
 
-  <main class="page__main main">
-    <h1 class="main__title">Форма для участника конкурса</h1>
-    <div class="contest">
-      <div class="contest__intro">
+  <main class="page__main">
+    <h1 class="visually-hidden">Форма для участника конкурса</h1>
+    <div class="page__contest contest">
+      <div class="contest__lead">
         <h2 class="contest__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
       </div>
-      <div class="contest__lead">
-        <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-      </div>
+      <p class="contest__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
       <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post">
         <ul class="form__list">
           <li class="form__item">
@@ -58,11 +77,12 @@
             <input class="form__input" id="middle-name" type="text" placeholder="Ну и отчество тоже">
           </li>
           <li class="form__item">
-            <span class="form__label">Ваши безбашенные достижения в путешествии</span>
+            <span class="form__label form__label--selet">Ваши безбашенные достижения в путешествии</span>
             <div class="score-group">
               <label class="score-group__item" aria-label="Сделал селфи с акулой">
                 <input class="score-group__input" type="checkbox" name="Shark-selfie-man" checked>
-                <span>Сделал селфи с акулой</span>
+                <span class="score-group__element"></span>
+                <span class="score-group__label">Сделал селфи с акулой</span>
               </label>
               <label class="score-group__item" aria-label="Обгорел на пляже">
                 <input class="score-group__input" type="checkbox" name="Sunburner-man" checked>
@@ -100,7 +120,7 @@
             <input class="form__input" id="user-email" type="email" placeholder="Введите почту *" required>
           </li>
           <li class="form__item">
-            <span class="form__label">С каким приложением путешествовали?</span>
+            <span class="form__label form__label--selet">С каким приложением путешествовали?</span>
             <div class="app-group">
               <label class="app-group__item" aria-label="Pink для iOS">
                 <input class="app-group__input" type="radio" name="operation system" value="iOS" checked>
@@ -120,15 +140,13 @@
             </div>
           </li>
           <li class="form__item">
-            <label class="form__label" for="feedback-text">Опишите свои эмоции</label>
+            <label class="form__label form__label--select" for="feedback-text">Опишите свои эмоции</label>
             <textarea class="form__textarea" id="feedback-text" rows="8" cols="20" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </li>
-          <button class="submit-btn btn" type="submit">Отправить форму</button>
+          <button class="form__submit-btn btn" type="submit">Отправить форму</button>
         </ul>
       </form>
-      <div class="contest__note">
-        <p><span>*</span> — обязательные поля</p>
-      </div>
+      <p class="contest__note"><span>*</span> — обязательные поля</p>
     </div>
   </main>
 
@@ -138,21 +156,21 @@
         <img src="https://via.placeholder.com/145x40" width="145" height="40" alt="Логотип Pink">
       </a>
     </div>
-    <ul class="footer__social social">
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href="#" aria-label="Twitter"></a>
+    <ul class="footer__social">
+      <li class="footer__social-item">
+        <a class="footer__social-link footer__social-link--twitter" href="#" aria-label="Twitter"></a>
       </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="#" aria-label="Facebook"></a>
+      <li class="footer__social-item">
+        <a class="footer__social-link footer__social-link--facebook" href="#" aria-label="Facebook"></a>
       </li>
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href="#" aria-label="YouTube"></a>
+      <li class="footer__social-item">
+        <a class="footer__social-link footer__social-link--youtube" href="#" aria-label="YouTube"></a>
       </li>
     </ul>
 
-    <div class="footer__copyright copyright">
-      <span class="copyright__text">Разработано</span>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+    <div class="footer__copyright">
+      <span class="footer__copyright-text">Разработано</span>
+      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <img src="https://via.placeholder.com/27x34" width="27" heigth="34" alt="Html Academy">
       </a>
     </div>

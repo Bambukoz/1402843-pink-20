@@ -1,11 +1,20 @@
-.recall__item-text {
+.recall__item {
   color: $main-black;
+  @include style-reset;
+}
+
+.recall__item-text {
+  @include style-reset;
 }
 
 .recall__item-author {
+  font-style: normal;
+  font-weight: 700;
   color: $black;
 }
 
 .recall__item span {
-  color: $main-black;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
 }
