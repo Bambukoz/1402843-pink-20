@@ -1,0 +1,27 @@
+.contest__lead {
+  background-color: $background-black;
+}
+
+.contest__title {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 300;
+  @include style-reset;
+}
+
+.contest__text {
+  font-size: 14px;
+  color: $main-black;
+  @include style-reset;
+}
+
+.contest__note {
+  font-size: 14px;
+  color: $main-black;
+  text-transform: uppercase;
+  @include style-reset;
+
+  & span {
+    color: $pink;
+  }
+}

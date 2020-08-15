@@ -1,3 +1,13 @@
-.footer {
-  background-color: pink;
+.footer__social {
+  @include style-reset;
+}
+
+.footer__social-item {
+  @include list-reset;
+}
+
+.footer__copyright-text {
+  font-style: 14px;
+  line-height: 18px;
+  color: $main-black;
 }

@@ -1,0 +1,39 @@
+.post__rubrick {
+  width: 140px;
+  background-color: $pink;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 13px 40px 14px 19px;
+}
+
+.post__description {
+  color: $main-black;
+}
+
+.post__author {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.post__time {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.post__text {
+  font-style: 14px;
+  line-height: 24px;
+}
+
+.post__stats {
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $pink;
+}

@@ -1,3 +1,12 @@
 .page {
-  background-color: blue;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-width: 320px;
+}
+
+.page__header {
+  position: relative;
+  width: 100%;
+  background-color: rgba($black, 0.3);
 }
