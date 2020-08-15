@@ -1,5 +1,5 @@
 .contest__lead {
-  background-color: $background-black;
+  background-color: $background-secondary;
 }
 
 .contest__title {
@@ -11,17 +11,17 @@
 
 .contest__text {
   font-size: 14px;
-  color: $main-black;
+  color: $secondary;
   @include style-reset;
 }
 
 .contest__note {
   font-size: 14px;
-  color: $main-black;
+  color: $secondary;
   text-transform: uppercase;
   @include style-reset;
 
   & span {
-    color: $pink;
+    color: $primary;
   }
 }

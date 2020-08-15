@@ -6,7 +6,13 @@
 }
 
 .page__header {
-  position: relative;
   width: 100%;
-  background-color: rgba($black, 0.3);
+}
+
+.page__main {
+  width: 100%;
+}
+
+.page__footer {
+  width: 100%;
 }

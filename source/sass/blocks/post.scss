@@ -1,6 +1,6 @@
 .post__rubrick {
   width: 140px;
-  background-color: $pink;
+  background-color: $primary;
   font-size: 12px;
   line-height: 24px;
   font-weight: 700;
@@ -9,7 +9,7 @@
 }
 
 .post__description {
-  color: $main-black;
+  color: $secondary;
 }
 
 .post__author {
@@ -35,5 +35,5 @@
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
-  color: $pink;
+  color: $primary;
 }

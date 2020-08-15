@@ -5,7 +5,7 @@
 .form__label {
   font-size: 14px;
   text-transform: uppercase;
-  color: $pink;
+  color: $primary;
 
   &--select {
     line-height: 18px;
@@ -13,14 +13,14 @@
 }
 
 .form__input::placeholder {
-  color: $main-black;
+  color: $secondary;
 }
 
 .form__textarea {
   resize: none;
 
   &::placeholder {
-    color: $main-black;
+    color: $secondary;
   }
 }
 

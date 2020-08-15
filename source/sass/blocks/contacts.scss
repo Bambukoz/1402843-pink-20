@@ -2,7 +2,7 @@
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
-  color: $main-black;
+  color: $secondary;
   @include style-reset;
 }
 
@@ -14,7 +14,7 @@
   font-size: 18px;
   line-height: 25px;
   font-weight: 700;
-  color: $main-black;
+  color: $secondary;
   @include style-reset;
 }
 
@@ -22,7 +22,7 @@
   font-size: 24px;
   line-height: 33px;
   font-weight: 300;
-  color: $pink;
+  color: $primary;
 
   &--normal {
     font-style: normal;
