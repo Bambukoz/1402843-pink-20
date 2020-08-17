@@ -3,23 +3,23 @@
 }
 
 .contest__title {
+  @include style-reset;
   font-size: 24px;
   line-height: 33px;
   font-weight: 300;
-  @include style-reset;
 }
 
 .contest__text {
+  @include style-reset;
   font-size: 14px;
   color: $secondary;
-  @include style-reset;
 }
 
 .contest__note {
+  @include style-reset;
   font-size: 14px;
   color: $secondary;
   text-transform: uppercase;
-  @include style-reset;
 
   & span {
     color: $primary;
