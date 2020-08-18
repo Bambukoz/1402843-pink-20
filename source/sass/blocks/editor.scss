@@ -1,4 +1,83 @@
+.editor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $background-primary;
+  padding: 20px;
+}
+
+.editor__window {
+  margin-bottom: 42px;
+}
+
+.editor__form {
+  width: 100%;
+}
+
+.editor__form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding: 0 20px 74px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    height: 1px;
+    width: calc(100% + 40px);
+    background-color: rgba($secondary, 0.1);
+  }
+}
+
+.editor__icon--photo-crop .editor__icon-color {
+  fill: $primary;
+  fill-opacity: 1;
+}
+
+.editor__input {
+  display: none;
+  position: absolute;
+  top: 82px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &--active {
+    display: block;
+  }
+}
+
+.editor__input-range {
+  position: relative;
+  width: 240px;
+  height: 2px;
+  background-color: $secondary;
+}
+
+.editor__input-btn {
+  position: absolute;
+  top: -6px;
+  left: 80%;
+  display: block;
+  height: 14px;
+  width: 14px;
+  background-color: $white;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
+}
+
 .editor__btn {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
@@ -7,9 +86,16 @@
   border: 3px solid $primary;
   border-radius: 30px;
 
-  &--disabled {
+  &--submit {
+    padding: 20px 90px;
+    margin: 38px 0 12px;
+  }
+
+  &--reset {
     color: $secondary;
     border-color: $secondary;
     opacity: 0.1;
+    padding: 20px 103px;
+    margin: 0 0 30px;
   }
 }

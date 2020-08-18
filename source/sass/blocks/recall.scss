@@ -20,10 +20,7 @@
 
 .recall__item-text {
   @include style-reset;
-
-  @include mobile {
-    order: 2;
-  }
+  order: 2;
 
   font-size: 14px;
   text-align: center;
@@ -32,10 +29,7 @@
 }
 
 .recall__item-author {
-  @include mobile {
-    order: 1;
-  }
-
+  order: 1;
   font-style: normal;
   font-weight: 700;
   text-align: center;
@@ -43,10 +37,7 @@
   padding-bottom: 31px;
 
   & span {
-    @include mobile {
-      display: none;
-    }
-
+    display: none;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;

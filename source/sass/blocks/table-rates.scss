@@ -27,9 +27,7 @@
 }
 
 .table-rates__title {
-  @include mobile {
-    display: none;
-  }
+  display: none;
 }
 
 .table-rates__name {
@@ -50,30 +48,28 @@
 }
 
 .table-rates__status {
-  @include mobile {
-    width: 31px;
-    height: 27px;
-    position: absolute;
-    display: block;
-    top: 16px;
-    right: 17px;
-    text-indent: -1000px;
-    overflow: hidden;
+  width: 31px;
+  height: 27px;
+  position: absolute;
+  display: block;
+  top: 16px;
+  right: 17px;
+  text-indent: -1000px;
+  overflow: hidden;
 
-    &--on {
-      background-image: url("../../img/icon-yes.svg");
-      background-size: 31px 21px;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  &--on {
+    background-image: url("../../img/icon-yes.svg");
+    background-size: 31px 21px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-    &--off {
-      width: 27px;
-      min-height: 27px;
-      background-image: url("../../img/icon-no.svg");
-      background-size: 27px 27px;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  &--off {
+    width: 27px;
+    min-height: 27px;
+    background-image: url("../../img/icon-no.svg");
+    background-size: 27px 27px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

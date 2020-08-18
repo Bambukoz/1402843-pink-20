@@ -64,17 +64,15 @@
 }
 
 .features__item:nth-child(3)::after {
-  @include mobile {
-    content: "";
-    display: block;
-    width: 157px;
-    height: 277px;
-    background-image: url("../../img/iphone-screen-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: top center;
-    margin-right: auto;
-    margin-left: auto;
-  }
+  content: "";
+  display: block;
+  width: 157px;
+  height: 277px;
+  background-image: url("../../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .features__item--clock {
