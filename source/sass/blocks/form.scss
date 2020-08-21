@@ -1,14 +1,45 @@
-.form__list {
-  @include list-reset;
+.form {
+  width: 100%;
+}
+
+.form__box {
+  padding: 1px 22px;
+
+  &--background {
+    background-color: $background-primary;
+  }
+}
+
+.form__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__label {
   font-size: 14px;
   text-transform: uppercase;
   color: $primary;
+  padding: 0 23px 0 17px;
+}
 
-  &--select {
-    line-height: 18px;
+.form__input {
+  padding: 23px 20px;
+  margin: 0 0 29px;
+}
+
+.form__box-legend {
+  @include style-reset;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary;
+  padding: 0 12px;
+  margin: 42px 0 44px;
+
+  &--textarea {
+    margin-bottom: 22px;
   }
 }
 
@@ -17,7 +48,12 @@
 }
 
 .form__textarea {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
   resize: none;
+  padding: 21px;
+  margin-bottom: 52px;
 
   &::placeholder {
     color: $secondary;
@@ -29,4 +65,7 @@
   font-weight: 700;
   text-transform: uppercase;
   color: $white;
+  border-radius: 1px;
+  padding: 23px 45px;
+  margin: 0 auto 46px;
 }

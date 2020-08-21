@@ -34,7 +34,15 @@
   }
 }
 
-.editor__icon--photo-crop .editor__icon-color {
+.editor__icon-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
+}
+
+.editor__icon-btn--photo-crop .editor__icon-color {
   fill: $primary;
   fill-opacity: 1;
 }
@@ -62,7 +70,6 @@
   position: absolute;
   top: -6px;
   left: 80%;
-  display: block;
   height: 14px;
   width: 14px;
   background-color: $white;
