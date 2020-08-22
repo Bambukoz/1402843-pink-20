@@ -1,0 +1,17 @@
+.rates {
+  width: 100%;
+  background-image: url("../../img/bg-triangle-white.svg");
+  background-color: $background-primary;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 140px 0 50px;
+}
+
+.rates__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 3px;
+}

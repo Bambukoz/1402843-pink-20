@@ -1,10 +1,14 @@
 .table-rates {
+  width: 840px;
   border-collapse: collapse;
 }
 
 .table-rates__th {
-  border: 2px solid #E5E5E5;
+  width: 280px;
+  height: 95px;
+  border: 2px solid $border-white;
   background-color: $secondary;
+  padding: 12px 10px 29px;
 }
 
 .table-rates__th--empty {
@@ -14,8 +18,16 @@
 }
 
 .table-rates__td {
-  border: 2px solid #E5E5E5;
+  position: relative;
+  width: 280px;
+  height: 60px;
+  border: 2px solid $border-white;
   color: $secondary;
+  padding: 9px 50px 10px 20px;
+}
+
+.table-rates__title {
+  display: none;
 }
 
 .table-rates__name {
@@ -36,7 +48,12 @@
 }
 
 .table-rates__status {
+  width: 31px;
+  height: 27px;
+  position: absolute;
   display: block;
+  top: 16px;
+  right: 17px;
   text-indent: -1000px;
   overflow: hidden;
 
@@ -48,8 +65,10 @@
   }
 
   &--off {
-    background-size: 27px 27px;
+    width: 27px;
+    min-height: 27px;
     background-image: url("../../img/icon-no.svg");
+    background-size: 27px 27px;
     background-repeat: no-repeat;
     background-position: center;
   }

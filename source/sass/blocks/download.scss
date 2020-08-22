@@ -26,12 +26,12 @@
 }
 
 .download__title {
+  @include style-reset;
   width: 280px;
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
   text-align: center;
-  @include style-reset;
   margin-right: auto;
   margin-bottom: 34px;
   margin-left: auto;
@@ -52,21 +52,21 @@
 }
 
 .download__list {
+  @include list-reset;
   width: 204px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  @include list-reset;
   margin: 0 auto 28px;
 }
 
 .download__text {
+  @include style-reset;
   width: 280px;
   min-height: 34px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 300;
   text-align: center;
-  @include style-reset;
   margin: 28px auto 19px;
 }

@@ -1,7 +1,5 @@
 .page {
   min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
   min-width: 320px;
 }
 
@@ -11,6 +9,7 @@
 
 .page__main {
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .page__footer {

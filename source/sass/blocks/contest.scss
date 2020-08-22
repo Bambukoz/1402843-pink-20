@@ -1,25 +1,37 @@
 .contest__lead {
   background-color: $background-secondary;
+  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 36px 0 51px;
+  margin-bottom: 54px;
 }
 
 .contest__title {
+  @include style-reset;
   font-size: 24px;
   line-height: 33px;
   font-weight: 300;
-  @include style-reset;
+  text-align: center;
+  padding: 0 46px;
 }
 
 .contest__text {
+  @include style-reset;
   font-size: 14px;
   color: $secondary;
-  @include style-reset;
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 50px;
 }
 
 .contest__note {
+  @include style-reset;
   font-size: 14px;
   color: $secondary;
   text-transform: uppercase;
-  @include style-reset;
+  padding: 0 68px;
 
   & span {
     color: $primary;
