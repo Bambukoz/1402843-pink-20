@@ -29,6 +29,10 @@
   border-radius: 1px;
 }
 
+.option-group__input[type="checkbox"] ~ .option-group__label {
+  padding-left: 47px;
+}
+
 .option-group__input[type="checkbox"]:checked ~ .option-group__element {
   background-image: url("../../img/icon-checked.svg");
   background-repeat: no-repeat;
@@ -44,6 +48,10 @@
   border-radius: 50%;
 }
 
+.option-group__input[type="radio"] ~ .option-group__label {
+  padding-left: 68px;
+}
+
 .option-group__input[type="radio"]:checked ~ .option-group__element {
   background-image: url("../../img/icon-map-marker.svg");
   background-repeat: no-repeat;
@@ -53,9 +61,4 @@
 .option-group__label {
   font-size: 18px;
   color: $secondary;
-  padding: 0 0 0 47px;
-
-  &--radio {
-    padding: 0 0 0 68px;
-  }
 }

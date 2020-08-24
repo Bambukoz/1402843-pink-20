@@ -7,12 +7,15 @@
 
 .page__header {
   width: 100%;
+  z-index: 2;
 }
 
 .page__main {
   width: 100%;
   margin-bottom: 40px;
   overflow: hidden;
+  margin-top: -72px;
+  z-index: 1;
 }
 
 .page__footer {

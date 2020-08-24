@@ -17,7 +17,8 @@
   line-height: 33px;
   font-weight: 300;
   text-align: center;
-  margin: 0 74px;
+  padding: 0 74px;
+  margin: 74px 0 0;
 }
 
 .photography__text {
@@ -25,5 +26,7 @@
   font-size: 14px;
   text-align: center;
   color: $black;
+  padding: 0 34px;
   margin-top: 49px;
+  margin-bottom: 49px;
 }
