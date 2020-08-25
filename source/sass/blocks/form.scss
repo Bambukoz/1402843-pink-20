@@ -24,6 +24,7 @@
 }
 
 .form__input {
+  line-height: 30px;
   padding: 23px 20px;
   margin: 0 0 29px;
 }
@@ -61,11 +62,12 @@
 }
 
 .form__submit-btn {
+  width: 276px;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   color: $white;
   border-radius: 1px;
-  padding: 23px 45px;
+  padding: 22px 45px;
   margin: 0 auto 46px;
 }

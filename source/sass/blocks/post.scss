@@ -1,29 +1,32 @@
 .post {
   position: relative;
+
+  &--panorama::before {
+    content: "Панорама дня";
+    width: 140px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: #d22856;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px 19px;
+    z-index: 1;
+  }
 }
 
 .post__description {
   @include style-reset;
-  position: relative;
   color: $secondary;
   background-color: $background-primary;
   padding-top: 25px;
   margin: 0 20px;
-}
-
-.post__rubrick {
-  width: 140px;
-  height: 36px;
-  position: absolute;
-  top: 0;
-  right: 20px;
-  background-color: $primary;
-  color: $white;
-  font-size: 12px;
-  line-height: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 7px 19px;
 }
 
 .post__link {
