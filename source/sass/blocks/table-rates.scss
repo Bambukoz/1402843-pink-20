@@ -7,14 +7,54 @@
   width: 280px;
   height: 95px;
   border: 2px solid $border-white;
+  border-radius: 1px;
+  border-top: none;
+  border-bottom: none;
   background-color: $secondary;
   padding: 12px 10px 29px;
-}
 
-.table-rates__th--empty {
-  border-top: 2px solid transparent;
-  border-left: 2px solid transparent;
-  background-color: transparent;
+  &:nth-child(2) {
+    border-radius: 2px 0 0 0;
+    border-left: none;
+  }
+
+  &:nth-child(4) {
+    border-radius: 0 2px 0 0;
+    border-right: none;
+  }
+
+  &--empty {
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    background-color: transparent;
+  }
+
+  &--hit {
+    position: relative;
+  }
+
+  &--hit::before {
+    content: "";
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    top: 0;
+    left: -2px;
+    background-image: url("../../img/bg-hit-mobile.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--hit::after {
+    content: "Хит";
+    position: absolute;
+    top: 15px;
+    left: 11px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotate(-45deg);
+  }
 }
 
 .table-rates__td {
@@ -22,8 +62,9 @@
   width: 280px;
   height: 60px;
   border: 2px solid $border-white;
+  border-top: none;
   color: $secondary;
-  padding: 9px 50px 10px 20px;
+  padding: 7px 50px 7px 21px;
 }
 
 .table-rates__title {
@@ -34,6 +75,7 @@
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: -3px;
 }
 
 .table-rates__price {
@@ -61,7 +103,7 @@
     background-image: url("../../img/icon-yes.svg");
     background-size: 31px 21px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 0 3px;
   }
 
   &--off {
@@ -70,6 +112,6 @@
     background-image: url("../../img/icon-no.svg");
     background-size: 27px 27px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: -2px 1px;
   }
 }

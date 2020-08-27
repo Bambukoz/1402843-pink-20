@@ -8,9 +8,9 @@
   min-height: 396px;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: -1px 3px;
   background-size: cover;
-  padding-top: 29px;
+  padding-top: 22px;
 
   &::after {
     content: "";
@@ -20,8 +20,7 @@
     background-image: url("../../img/iphone-hand-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: left bottom;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
   }
 }
 
@@ -32,7 +31,7 @@
   line-height: 29px;
   font-weight: 300;
   text-align: center;
-  margin: 72px auto 34px;
+  margin: 72px auto 19px;
 }
 
 .download__btn {
@@ -46,7 +45,7 @@
   background-color: transparent;
   color: $white;
   padding: 15px 35px;
-  margin: 28px auto 32px;
+  margin: 28px auto;
 }
 
 .download__list {
@@ -54,8 +53,13 @@
   width: 204px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin: 0 auto 28px;
+  align-items: flex-end;
+  margin: 0 auto 15px;
+}
+
+.download__link {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .download__text {
@@ -66,5 +70,5 @@
   line-height: 24px;
   font-weight: 300;
   text-align: center;
-  margin: 28px auto 19px;
+  margin: 0 auto 12px;
 }

@@ -8,7 +8,7 @@
 }
 
 .editor__window {
-  margin-bottom: 42px;
+  margin-bottom: 32px;
 }
 
 .editor__form {
@@ -18,10 +18,10 @@
 .editor__form-wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   position: relative;
-  padding: 0 20px 74px;
+  padding-bottom: 73px;
+  margin-bottom: 39px;
 
   &::after {
     content: "";
@@ -40,6 +40,7 @@
   font-size: 0;
   line-height: 0;
   padding: 0;
+  margin: 0 24px 0 10px;
 }
 
 .editor__icon-btn--photo-crop .editor__icon-color {
@@ -50,7 +51,7 @@
 .editor__input {
   display: none;
   position: absolute;
-  top: 82px;
+  top: 85px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -68,8 +69,8 @@
 
 .editor__input-btn {
   position: absolute;
-  top: -6px;
-  left: 80%;
+  top: -5px;
+  left: 81%;
   height: 14px;
   width: 14px;
   background-color: $white;
@@ -94,15 +95,15 @@
   border-radius: 30px;
 
   &--submit {
-    padding: 20px 90px;
-    margin: 38px 0 12px;
+    padding: 16px 88px 15px 87px;
+    margin-bottom: 12px;
   }
 
   &--reset {
     color: $secondary;
     border-color: $secondary;
     opacity: 0.1;
-    padding: 20px 103px;
-    margin: 0 0 30px;
+    padding: 16px 101px 15px 100px;
+    margin-bottom: 21px;
   }
 }

@@ -3,10 +3,13 @@
 }
 
 .form__box {
-  padding: 1px 22px;
+  padding: 0 20px;
+  margin-bottom: 42px;
 
   &--background {
     background-color: $background-primary;
+    padding-top: 40px;
+    margin-bottom: 32px;
   }
 }
 
@@ -14,19 +17,22 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 18px;
 }
 
 .form__label {
   font-size: 14px;
   text-transform: uppercase;
   color: $primary;
-  padding: 0 23px 0 17px;
+  padding: 0 23px 0;
+  margin-bottom: 5px;
 }
 
 .form__input {
+  border: 2px solid $border-white;
+  border-radius: 1px;
   line-height: 30px;
-  padding: 23px 20px;
-  margin: 0 0 29px;
+  padding: 13px 20px 15px;
 }
 
 .form__box-legend {
@@ -36,11 +42,11 @@
   text-align: center;
   text-transform: uppercase;
   color: $primary;
-  padding: 0 12px;
-  margin: 42px 0 44px;
+  padding: 0 14px;
+  margin-bottom: 40px;
 
   &--textarea {
-    margin-bottom: 22px;
+    margin: 6px 0 16px;
   }
 }
 
@@ -49,12 +55,14 @@
 }
 
 .form__textarea {
+  border: 2px solid $border-white;
+  border-radius: 1px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
   resize: none;
-  padding: 21px;
-  margin-bottom: 52px;
+  padding: 13px 20px 4px;
+  margin-bottom: 6px;
 
   &::placeholder {
     color: $secondary;
@@ -62,12 +70,12 @@
 }
 
 .form__submit-btn {
-  width: 276px;
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $white;
-  border-radius: 1px;
-  padding: 22px 45px;
-  margin: 0 auto 46px;
+      width: 280px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 1px;
+    padding: 21px 23px 22px 22px;
+    margin: 0 auto 34px;
 }

@@ -4,8 +4,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 36px 0 51px;
-  margin-bottom: 54px;
+  padding: 25px 0 44px;
+  margin-bottom: 44px;
 }
 
 .contest__title {
@@ -24,7 +24,7 @@
   color: $secondary;
   text-align: center;
   padding: 0 20px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .contest__note {
@@ -32,7 +32,8 @@
   font-size: 14px;
   color: $secondary;
   text-transform: uppercase;
-  padding: 0 68px;
+  padding: 0 68px 0 69px;
+  margin-bottom: 16px;
 
   & span {
     color: $primary;
