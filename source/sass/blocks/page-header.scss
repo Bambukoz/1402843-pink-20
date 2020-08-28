@@ -18,10 +18,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 21px $padding-mobile;
+  padding: 23px $padding-mobile 15px;
 
   @include desktop {
     padding: 0;
+  }
+
+  @include tablet {
+    padding: 27px $padding-mobile 15px;
   }
 }
 
@@ -47,6 +51,7 @@
   line-height: 0;
   background-color: transparent;
   outline: none;
+  margin: -5px -1px 6px;
 
   @include desktop {
     display: none;
@@ -63,7 +68,7 @@
   height: 4px;
   border-radius: 1px;
   background-color: $white;
-  right: 0;
+  right: 1px;
 
   &:nth-child(1) {
     top: 0;

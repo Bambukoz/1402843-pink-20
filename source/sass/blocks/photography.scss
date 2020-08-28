@@ -1,5 +1,5 @@
 .photography {
-  margin-bottom: 52px;
+  margin-bottom: 42px;
 }
 
 .photography__lead {
@@ -8,7 +8,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 36px 0 84px;
+  padding: 24px 0 76px;
+  margin-bottom: 44px;
 }
 
 .photography__title {
@@ -26,7 +27,10 @@
   font-size: 14px;
   text-align: center;
   color: $black;
-  padding: 0 34px;
-  margin-top: 49px;
-  margin-bottom: 49px;
+  padding: 0 33px;
+  margin-bottom: 50px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }

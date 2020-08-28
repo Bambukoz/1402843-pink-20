@@ -1,9 +1,9 @@
 .toggle-group {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 45px;
 }
 
 .toggle-group__item {
@@ -18,7 +18,8 @@
   border-radius: 50%;
   cursor: pointer;
   outline: none;
-  margin-right: 19px;
+  margin-right: 16px;
+
 
   &:last-child {
     margin-right: 0;

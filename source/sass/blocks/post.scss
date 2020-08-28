@@ -1,5 +1,6 @@
 .post {
   position: relative;
+  margin-bottom: 20px;
 
   &--panorama::before {
     content: "Панорама дня";
@@ -19,13 +20,17 @@
     padding: 7px 19px;
     z-index: 1;
   }
+
+  &:last-of-type {
+    margin-bottom: 43px;
+  }
 }
 
 .post__description {
   @include style-reset;
   color: $secondary;
   background-color: $background-primary;
-  padding-top: 25px;
+  padding: 18px 0 17px;
   margin: 0 20px;
 }
 
@@ -45,7 +50,6 @@
   line-height: 24px;
   font-weight: 700;
   padding: 0 17px;
-  margin-bottom: 14px;
 }
 
 .post__time {
@@ -58,14 +62,12 @@
   @include style-reset;
   font-size: 14px;
   line-height: 24px;
-  padding: 0 14px;
-  margin-bottom: 23px;
+  padding: 0 13px 0 17px;
+  margin-bottom: 6px;
 }
 
 .post__wrapper {
   position: relative;
-  padding-bottom: 26px;
-  margin-bottom: 20px;
 }
 
 .post__like-btn {
@@ -90,5 +92,5 @@
   line-height: 24px;
   text-transform: uppercase;
   color: $primary;
-  padding-left: 37px;
+  padding-left: 49px;
 }
