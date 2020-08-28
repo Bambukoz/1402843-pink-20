@@ -17,6 +17,13 @@
   color: $secondary;
   padding: 1px 35px;
   margin-bottom: 27px;
+
+  @include tablet {
+    font-size: 40px;
+    line-height: 54px;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .features__lead-text {
@@ -28,6 +35,11 @@
   color: $secondary;
   padding: 1px 35px;
   margin-bottom: 30px;
+
+  @include tablet {
+    font-size: 40px;
+    line-height: 54px;
+  }
 }
 
 .features__wrapper {
@@ -37,22 +49,36 @@
   background-repeat: no-repeat;
   background-size: 107%;
   padding-top: 82px;
+  margin-bottom: 50px;
 }
 
 .features__list {
   @include list-reset;
+  position: relative;
+
+  @include tablet {
+    padding-left: 50%;
+  }
 }
 
 .features__item {
-  overflow: hidden;
+  position: relative;
   margin-bottom: 31px;
 
   &--clock {
     display: none;
+    background-color: $white;
+    padding: 50px 20px 50px 100%;
+    margin-left: -100%;
 
     @include tablet {
       display: block;
     }
+  }
+
+  &--clock > .features__item-title {
+    font-size: 30px;
+    line-height: 36px;
   }
 }
 
@@ -64,6 +90,10 @@
   text-align: center;
   color: $black;
   margin-bottom: 12px;
+
+  @include tablet {
+    text-align: start;
+  }
 }
 
 .features__item-text {
@@ -73,16 +103,56 @@
   text-align: center;
   color: $secondary;
   padding: 0 20px;
+
+  @include tablet {
+    text-align: start;
+    padding-right: 20px;
+    padding-left: 0;
+  }
+}
+
+.features__item-link {
+  display: none;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: $primary;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.features__item-wrapper {
+  width: 157px;
+  height: 277px;
+  overflow: hidden;
+  margin: 41px auto;
+
+  @include tablet {
+    position: absolute;
+    top: -438px;
+    left: -304px;
+    width: 268px;
+    height: 547px;
+  }
+
+  &--clock {
+    top: -42px;
+    left: 29px;
+  }
 }
 
 .features__item-image {
   display: none;
-  position: relative;
-  bottom: -42px;
-  left: 0;
-  margin: 0 auto;
 
   &--third {
     display: block;
+  }
+
+  &--timer {
+    @include tablet {
+      display: block;
+    }
   }
 }

@@ -23,6 +23,10 @@
   @include desktop {
     padding: 0;
   }
+
+  @include tablet {
+    padding: 27px $padding-mobile 15px;
+  }
 }
 
 .page-header__main-nav {
