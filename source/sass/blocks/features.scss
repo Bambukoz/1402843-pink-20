@@ -50,6 +50,14 @@
   background-size: 107%;
   padding-top: 82px;
   margin-bottom: 50px;
+
+  &--clock {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
 }
 
 .features__list {
@@ -76,7 +84,7 @@
     }
   }
 
-  &--clock > .features__item-title {
+  &--clock>.features__item-title {
     font-size: 30px;
     line-height: 36px;
   }
@@ -124,22 +132,32 @@
 }
 
 .features__item-wrapper {
+  display: none;
   width: 157px;
   height: 277px;
   overflow: hidden;
   margin: 41px auto;
 
-  @include tablet {
-    position: absolute;
-    top: -438px;
-    left: -304px;
-    width: 268px;
-    height: 547px;
+  &--third {
+    display: block;
+
+    @include tablet {
+      position: absolute;
+      top: -438px;
+      left: -304px;
+      width: 268px;
+      height: 547px;
+    }
   }
 
   &--clock {
+    display: none;
     top: -42px;
     left: 29px;
+
+    @include tablet {
+      display: block;
+    }
   }
 }
 
