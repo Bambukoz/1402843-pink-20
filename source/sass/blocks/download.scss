@@ -25,28 +25,6 @@
     background-position: center;
     padding-top: 27px;
   }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 320px;
-    height: 296px;
-    background-image: url("../../img/iphone-hand-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    margin: 0 auto;
-
-    @include tablet {
-      position: absolute;
-      top: 184px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 660px;
-      height: 545px;
-      background-image: url("../../img/iphone-hand-tablet@1x.png");
-      z-index: 0;
-    }
-  }
 }
 
 .download__inner {

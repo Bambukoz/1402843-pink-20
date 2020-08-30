@@ -31,3 +31,18 @@
   @include style-reset;
   list-style: none;
 }
+
+@mixin page-wrapper-mobile {
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
+}
+
+@mixin page-wrapper-tablet {
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
+}
+
+@mixin page-wrapper-desktop {
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
+}
