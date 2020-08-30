@@ -1,105 +1,130 @@
 .download {
+  @include page-wrapper-mobile;
+  width: 100%;
   background-color: $background-secondary;
+
+  @include tablet {
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+  }
+}
+
+.download__wrapper {
+  width: 100%;
+  max-width: $tablet-width;
+  margin: 0 auto;
+}
+
+.download__main {
+  width: 100%;
+  padding-top: 89px;
   padding-bottom: 19px;
 
   @include tablet {
-    padding-bottom: 0;
+    padding-top: 200px;
+    width: 300px;
+    padding-bottom: 119px;
   }
 }
 
 .download__lead {
-  width: 100%;
+  margin-left: -$padding-mobile;
+  margin-right: -$padding-mobile;
+
   display: flex;
   flex-direction: column;
-  position: relative;
-  min-height: 396px;
+  align-items: center;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: -1px 3px;
   background-size: cover;
-  padding-top: 22px;
+  margin-bottom: 18px;
 
   @include tablet {
-    min-height: 729px;
-    background-image: url("../../img/bg-back-tablet@1x.jpg");
-    background-position: center;
-    padding-top: 27px;
+    background: none;
   }
 }
 
-.download__inner {
-  background-color: $background-secondary;
-  order: 2;
+.download__img {
+  font-size: 0;
+  line-height: 0;
 
   @include tablet {
-    background-color: transparent;
-    margin: 0 auto 0 20px;
-    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
   }
 }
 
 .download__title {
   @include style-reset;
-  width: 280px;
+  @include page-wrapper-mobile;
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
   text-align: center;
-  margin: 72px auto 19px;
+  color: $white;
+  margin-bottom: 30px;
 
   @include tablet {
-    width: 300px;
     font-size: 40px;
     line-height: 48px;
-    padding: 0 50px;
-    margin: 129px auto 20px 20px;
+    position: relative;
+    z-index: 1;
   }
 }
 
 .download__btn {
+  @include btn-reset;
   width: 280px;
+  display: block;
   min-height: 55px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   border: 3px solid $white;
   border-radius: 29px;
-  background-color: transparent;
   color: $white;
   padding: 15px 35px;
-  margin: 28px auto;
+  margin: 0 auto 18px;
 
   @include tablet {
     width: 300px;
+    position: relative;
+    z-index: 1;
   }
 }
 
 .download__list {
   @include list-reset;
-  width: 204px;
+  width: 280px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 0 auto 15px;
-}
+  flex-wrap: wrap;
+  margin: 0 auto 18px;
 
-.download__link {
-  display: inline-block;
-  vertical-align: middle;
+  @include tablet {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .download__text {
   @include style-reset;
-  width: 280px;
   min-height: 34px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 300;
   text-align: center;
-  margin: 0 auto 12px;
+  color: $white;
 
   @include tablet {
-    width: 300px;
     font-size: 18px;
+    position: relative;
+    z-index: 1;
   }
 }

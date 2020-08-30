@@ -46,3 +46,11 @@
   padding-left: $padding-mobile;
   padding-right: $padding-mobile;
 }
+
+@mixin btn-reset {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  background-color: transparent;
+}
