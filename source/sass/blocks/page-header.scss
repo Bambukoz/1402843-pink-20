@@ -10,6 +10,10 @@
     opacity: 1;
   }
 
+  @include tablet {
+    min-height: 110px;
+  }
+
   @include desktop {
     flex-direction: row;
   }
@@ -33,6 +37,11 @@
 .page-header__main-nav {
   display: none;
   border-top: 1px solid $black;
+
+  @include desktop {
+    display: block;
+    border-top: none;
+  }
 }
 
 .page-header--nojs .page-header__main-nav,

@@ -22,24 +22,37 @@
 .recall__item-text {
   @include style-reset;
   order: 2;
-
   font-size: 14px;
   text-align: center;
   padding: 0 19px;
+
+  @include tablet {
+    font-size: 18px;
+    order: 1;
+  }
 }
 
 .recall__item-author {
-  order: 1;
   font-style: normal;
   font-weight: 700;
   text-align: center;
   color: $black;
   padding-bottom: 13px;
+  order: 1;
+
+  @include tablet {
+    font-size: 20px;
+    order: 2;
+  }
 
   & span {
     display: none;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
+
+    @include tablet {
+      display: block;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+    }
   }
 }

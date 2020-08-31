@@ -1,3 +1,28 @@
 .logo {
+  display: block;
   background-color: transparent;
+
+  @include tablet {
+    display: none;
+  }
+
+  &--tablet {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @include desktop {
+      display: block;
+    }
+  }
 }

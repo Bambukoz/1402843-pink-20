@@ -16,6 +16,10 @@
   margin-top: -69px;
   margin-bottom: 40px;
   z-index: 1;
+
+  @include tablet {
+    margin-top: -110px;
+  }
 }
 
 .page__footer {

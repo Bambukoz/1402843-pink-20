@@ -7,6 +7,12 @@
   background-size: 100%;
   padding: 103px 0 46px;
   margin-bottom: 41px;
+
+  @include tablet {
+    @include page-wrapper-tablet;
+    padding-bottom: 72px;
+    margin-bottom: 0;
+  }
 }
 
 .rates__wrapper {
