@@ -15,10 +15,11 @@
 
   @include desktop {
     @include page-wrapper-desktop;
-    width: 1200px;
+    width: 100%;
     flex-direction: row;
+    justify-content: center;
     background-color: $background-primary;
-    padding-bottom: 59px;
+    padding-bottom: 67px;
     margin-bottom: 72px;
   }
 }
@@ -29,8 +30,10 @@
   left: 20px;
 
   @include desktop {
+    width: 298px;
+    height: 345px;
     position: static;
-    margin-right: 72px;
+    margin-right: 71px;
   }
 
   & img {
@@ -48,7 +51,8 @@
   padding-top: 43px;
 
   @include desktop {
-    padding-top: 40px;
+    padding-top: 48px;
+    margin-right: 43px;
   }
 }
 
