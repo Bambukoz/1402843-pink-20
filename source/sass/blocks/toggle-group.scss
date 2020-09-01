@@ -10,6 +10,12 @@
       display: none;
     }
   }
+
+  &--cite {
+    @include desktop {
+      display: none;
+    }
+  }
 }
 
 .toggle-group__item {
@@ -24,7 +30,7 @@
   border-radius: 50%;
   cursor: pointer;
   outline: none;
-  margin-right: 16px;
+  margin-right: 18px;
 
 
   &:last-child {

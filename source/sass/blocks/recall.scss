@@ -1,8 +1,31 @@
 .recall {
+  @include page-wrapper-mobile;
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 35px;
+
+  @include tablet {
+    margin-bottom: 8px;
+  }
+
+  @include desktop {
+    @include page-wrapper-desktop;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    @include desktop {
+      content: "";
+      width: 79px;
+      height: 63px;
+      background-image: url("../../img/icon-quotes.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0 auto 49px;
+    }
+  }
 }
 
 .recall__item {
@@ -10,12 +33,44 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: $secondary;
   margin-bottom: 31px;
+
+  @include tablet {
+    margin-bottom: 23px;
+  }
+
+  @include desktop {
+    padding: 0 74px;
+  }
 
   &--two,
   &--three {
     display: none;
+  }
+}
+
+.recall__btn {
+  @include btn-reset;
+  width: 22px;
+  height: 42px;
+  position: absolute;
+  top: 141px;
+  opacity: 0.3;
+
+  &--left {
+    left: 130px;
+    background-image: url("../../img/icon-review-arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--right {
+    right: 130px;
+    background-image: url("../../img/icon-review-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -24,10 +79,10 @@
   order: 2;
   font-size: 14px;
   text-align: center;
-  padding: 0 19px;
 
   @include tablet {
     font-size: 18px;
+    margin-bottom: 36px;
     order: 1;
   }
 }
@@ -45,6 +100,11 @@
     order: 2;
   }
 
+  @include desktop {
+    width: 250px;
+    font-size: 24px;
+  }
+
   & span {
     display: none;
 
@@ -53,6 +113,11 @@
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
+    }
+
+    @include desktop {
+      font-size: 18px;
+      margin-top: 2px;
     }
   }
 }

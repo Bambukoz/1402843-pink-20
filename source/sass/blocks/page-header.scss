@@ -16,6 +16,10 @@
 
   @include desktop {
     flex-direction: row;
+
+    @include desktop {
+      padding: 0 $padding-desktop 9px;
+    }
   }
 }
 
@@ -23,14 +27,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 23px $padding-mobile 15px;
-
-  @include desktop {
-    padding: 0;
-  }
+  padding: 23px $padding-mobile 16px;
 
   @include tablet {
     padding: 27px $padding-mobile 15px;
+  }
+
+  @include desktop {
+    padding: 0;
+    margin-right: 144px;
   }
 }
 
@@ -61,7 +66,11 @@
   line-height: 0;
   background-color: transparent;
   outline: none;
-  margin: -5px -1px 6px;
+  margin: -5px 0 6px;
+
+  @include tablet {
+    margin: 8px -1px 0 0;
+  }
 
   @include desktop {
     display: none;

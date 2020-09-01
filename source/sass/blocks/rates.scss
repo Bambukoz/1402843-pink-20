@@ -10,8 +10,15 @@
 
   @include tablet {
     @include page-wrapper-tablet;
-    padding-bottom: 72px;
-    margin-bottom: 0;
+    padding-bottom: 67px;
+    margin-bottom: 44px;
+  }
+
+  @include desktop {
+    @include page-wrapper-desktop;
+    padding-top: 154px;
+    padding-bottom: 95px;
+    margin-bottom: 60px;
   }
 }
 
@@ -20,5 +27,10 @@
   display: flex;
   justify-content: center;
   padding-bottom: 1px;
-  margin-bottom: 42px;
+  margin-bottom: 41px;
+
+  @include tablet {
+    padding: 0;
+    margin: 0;
+  }
 }

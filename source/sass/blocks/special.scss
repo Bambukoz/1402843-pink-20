@@ -3,14 +3,23 @@
 
   @include tablet {
     @include page-wrapper-tablet;
+    width: 660px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 660px;
     padding-left: 330px;
     padding-bottom: 40px;
-    margin: 54px auto 109px;
+    margin: 0 auto 81px;
+  }
+
+  @include desktop {
+    @include page-wrapper-desktop;
+    width: 1200px;
+    flex-direction: row;
+    background-color: $background-primary;
+    padding-bottom: 59px;
+    margin-bottom: 72px;
   }
 }
 
@@ -18,19 +27,58 @@
   position: absolute;
   top: 0;
   left: 20px;
-  width: 238px;
-  height: 276px;
+
+  @include desktop {
+    position: static;
+    margin-right: 72px;
+  }
+
+  & img {
+    width: 238px;
+    height: 276px;
+
+    @include desktop {
+      width: 298px;
+      height: 345px;
+    }
+  }
+}
+
+.special__info {
+  padding-top: 43px;
+
+  @include desktop {
+    padding-top: 40px;
+  }
 }
 
 .special__title {
+  @include style-reset;
+  width: 170px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  margin-bottom: 9px;
+
+  @include desktop {
+    width: 100%;
+    margin-bottom: 22px;
+  }
 }
 
 .special__text {
+  @include style-reset;
+  width: 310px;
   font-size: 14px;
   line-height: 24px;
+  margin-bottom: 5px;
+
+  @include desktop {
+    width: 526px;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 31px;
+  }
 }
 
 .special__link {
@@ -38,4 +86,9 @@
   line-height: 24px;
   text-decoration-line: underline;
   color: $primary;
+
+  @include desktop {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

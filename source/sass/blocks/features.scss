@@ -9,11 +9,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 39px;
-  padding-bottom: 25px;
+  padding-top: 40px;
+  padding-bottom: 32px;
+
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 47px 0 32px;
+  }
 
   @include desktop {
     @include page-wrapper-desktop;
+    margin: 62px 0 16px;
   }
 }
 
@@ -26,13 +33,18 @@
   font-weight: 300;
   text-align: center;
   color: $secondary;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
 
   @include tablet {
     width: 100%;
     font-size: 40px;
     line-height: 54px;
     margin: 0;
+  }
+
+  @include desktop {
+    font-size: 50px;
+    line-height: 68px;
   }
 }
 
@@ -46,13 +58,15 @@
   color: $secondary;
 
   @include tablet {
-    width: 100%;
+    width: 350px;
     font-size: 40px;
     line-height: 54px;
   }
 
   @include desktop {
     width: 700px;
+    font-size: 50px;
+    line-height: 68px;
   }
 }
 
@@ -65,12 +79,23 @@
   background-image: url("../../img/bg-triangle-white.svg");
   background-color: $background-primary;
   background-repeat: no-repeat;
-  background-size: 107%;
-  padding-top: 82px;
+  background-size: 100%;
+  padding-top: 81px;
+  margin-bottom: 41px;
+
+  @include tablet {
+    padding-top: 73px;
+    padding-bottom: 43px;
+    margin-bottom: 54px;
+  }
 
   @include desktop {
+    background-size: 140%;
+    padding-top: 40px;
     padding-left: 120px;
     padding-right: 120px;
+    padding-bottom: 68px;
+    margin-bottom: 0;
   }
 }
 
@@ -86,13 +111,12 @@
 
   @include desktop {
     width: auto;
-    margin-left: -10px;
-    margin-right: -10px;
+    position: static;
     display: flex;
     flex-wrap: wrap;
+    align-items: baseline;
     padding-left: 0;
     padding-right: 0;
-    position: static;
   }
 }
 
@@ -102,24 +126,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 
-  &:last-child {
-    margin-bottom: 0;
+  @include tablet {
+    margin-bottom: 34px;
   }
 
   @include desktop {
-    margin: 0;
     width: 320px;
-    padding-left: 10px;
-    padding-right: 10px;
     flex-direction: column-reverse;
+    margin: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
 .features__info {
   width: 100%;
-  margin-bottom: 30px;
 }
 
 .features__img {
@@ -127,20 +152,22 @@
 
   @include desktop {
     display: block;
+    margin-bottom: 48px;
   }
 
   &--visible {
     display: block;
-    width: 136px;
-    height: 245px;
+    width: 157px;
+    height: 318px;
     overflow: hidden;
+    padding-top: 41px;
 
     @include tablet {
       position: absolute;
       width: 268px;
-      height: 481px;
-      bottom: 0;
-      left: $padding-mobile;
+      height: 527px;
+      bottom: -48px;
+      left: 21px;
     }
 
     @include desktop {
@@ -149,6 +176,7 @@
       height: auto;
       bottom: unset;
       left: unset;
+      padding-top: 0;
     }
   }
 }
@@ -168,6 +196,10 @@
 
   @include desktop {
     text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 0 42px;
+    margin: 0 auto 22px;
   }
 }
 
@@ -185,5 +217,8 @@
 
   @include desktop {
     text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0 36px;
   }
 }
