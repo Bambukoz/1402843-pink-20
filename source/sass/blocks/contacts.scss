@@ -178,6 +178,7 @@
 .contacts__interactive-map {
   width: 100%;
   min-height: 216px;
+  border: none;
   margin-bottom: -10px;
 
   @include tablet {
@@ -186,7 +187,7 @@
 
   @include desktop {
     min-height: 494px;
-    width: 86%;
+    width: 85%;
     margin-left: 111px;
   }
 }

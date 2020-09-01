@@ -31,11 +31,13 @@
 
   @include tablet {
     padding: 27px $padding-mobile 15px;
+    margin-bottom: 19px;
   }
 
   @include desktop {
     padding: 0;
     margin-right: 144px;
+    margin-bottom: 0;
   }
 }
 
