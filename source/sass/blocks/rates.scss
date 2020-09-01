@@ -7,6 +7,19 @@
   background-size: 100%;
   padding: 103px 0 46px;
   margin-bottom: 41px;
+
+  @include tablet {
+    @include page-wrapper-tablet;
+    padding-bottom: 67px;
+    margin-bottom: 44px;
+  }
+
+  @include desktop {
+    @include page-wrapper-desktop;
+    padding-top: 154px;
+    padding-bottom: 95px;
+    margin-bottom: 60px;
+  }
 }
 
 .rates__wrapper {
@@ -14,5 +27,10 @@
   display: flex;
   justify-content: center;
   padding-bottom: 1px;
-  margin-bottom: 42px;
+  margin-bottom: 41px;
+
+  @include tablet {
+    padding: 0;
+    margin: 0;
+  }
 }

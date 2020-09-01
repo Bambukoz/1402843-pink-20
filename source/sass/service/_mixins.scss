@@ -43,8 +43,8 @@
 }
 
 @mixin page-wrapper-desktop {
-  padding-left: $padding-mobile;
-  padding-right: $padding-mobile;
+  padding-left: $padding-desktop;
+  padding-right: $padding-desktop;
 }
 
 @mixin btn-reset {

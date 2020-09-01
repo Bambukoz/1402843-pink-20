@@ -1,6 +1,14 @@
 .table-rates {
   width: 840px;
   border-collapse: collapse;
+
+  @include tablet {
+    width: 621px;
+  }
+
+  @include desktop {
+    width: 944px;
+  }
 }
 
 .table-rates__th {
@@ -11,7 +19,18 @@
   border-top: none;
   border-bottom: none;
   background-color: $secondary;
+  color: $white;
   padding: 12px 10px 29px;
+
+  @include tablet {
+    width: 152px;
+    height: 79px;
+    padding: 9px 16px;
+  }
+
+  @include desktop {
+    height: 98px;
+  }
 
   &:nth-child(2) {
     border-radius: 2px 0 0 0;
@@ -21,12 +40,6 @@
   &:nth-child(4) {
     border-radius: 0 2px 0 0;
     border-right: none;
-  }
-
-  &--empty {
-    border-top: 2px solid transparent;
-    border-left: 2px solid transparent;
-    background-color: transparent;
   }
 
   &--hit {
@@ -39,21 +52,39 @@
     height: 74px;
     position: absolute;
     top: 0;
-    left: -2px;
-    background-image: url("../../img/bg-hit-mobile.svg");
+    left: 0;
+    background-image: url("../../img/bg-hit.svg");
     background-repeat: no-repeat;
+
+    @include tablet {
+      background-size: 57px 57px;
+    }
+
+    @include desktop {
+      background-size: 74px 74px;
+    }
   }
 
   &--hit::after {
     content: "Хит";
     position: absolute;
     top: 15px;
-    left: 11px;
+    left: 14px;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
     transform: rotate(-45deg);
+
+    @include tablet {
+      top: 10px;
+      left: 7px;
+    }
+
+    @include desktop {
+      top: 15px;
+      left: 15px;
+    }
   }
 }
 
@@ -63,12 +94,38 @@
   height: 60px;
   border: 2px solid $border-white;
   border-top: none;
-  color: $secondary;
   padding: 7px 50px 7px 21px;
+
+  @include tablet {
+    width: 152px;
+    height: 47px;
+  }
+
+  @include desktop {
+    height: 61px;
+  }
 }
 
 .table-rates__title {
   display: none;
+
+  @include tablet {
+    display: table-cell;
+    background-color: transparent;
+    border-top: 2px solid $border-white;
+    padding: 7px 16px;
+  }
+
+  @include desktop {
+    padding: 7px 5px 7px 23px;
+  }
+
+  &--top {
+    @include tablet {
+      border-top: none;
+      border-left: none;
+    }
+  }
 }
 
 .table-rates__name {
@@ -76,17 +133,41 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: -3px;
+
+  @include desktop {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
 }
 
 .table-rates__price {
   font-size: 18px;
   font-weight: 300;
   text-transform: uppercase;
+
+  @include desktop {
+    font-size: 24px;
+  }
 }
 
 .table-rates__option {
   font-size: 14px;
   text-transform: uppercase;
+
+  @include tablet {
+    display: none;
+  }
+
+  &--show {
+    @include tablet {
+      display: block;
+      text-transform: none;
+    }
+
+    @include desktop {
+      font-size: 18px;
+    }
+  }
 }
 
 .table-rates__status {
@@ -95,9 +176,19 @@
   position: absolute;
   display: block;
   top: 16px;
-  right: 17px;
+  right: 18px;
   text-indent: -1000px;
   overflow: hidden;
+
+  @include tablet {
+    top: 8px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  @include desktop {
+    top: 15px;
+  }
 
   &--on {
     background-image: url("../../img/icon-yes.svg");
@@ -112,6 +203,5 @@
     background-image: url("../../img/icon-no.svg");
     background-size: 27px 27px;
     background-repeat: no-repeat;
-    background-position: -2px 1px;
   }
 }
