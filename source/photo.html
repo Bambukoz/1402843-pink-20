@@ -98,16 +98,20 @@
   </header>
 
   <main class="page__main">
-    <div class="page__photography photography">
+    <section class="photography">
       <div class="photography__lead">
         <h1 class="photography__title">Фотографии пользователей</h1>
       </div>
-      <p class="photography__text">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как не хватает ваших?</p>
-      <article class="photography__post post post--panorama">
+
+      <p class="photography__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+
+      <article class="post post--panorama">
         <h2 class="visually-hidden">Пост с фотографией</h2>
-        <a class="post__link" href="#">
+        <a class="post__link post__link--panorama" href="#">
           <picture>
-            <img class="post__image" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Тут будет фото">
+            <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
+            <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама">
           </picture>
         </a>
         <blockquote class="post__description">
@@ -120,135 +124,151 @@
         </blockquote>
       </article>
 
-      <article class="photography__post post">
-        <h2 class="visually-hidden">Пост с фотографией</h2>
-        <a class="post__link" href="#">
-          <picture>
-            <img class="post__image" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Тут будет фото">
-          </picture>
-        </a>
-        <blockquote class="post__description">
-          <cite class="post__author">Левон&#160;<span class="post__time">&#40;5 часов назад&#41;</span></cite>
-          <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-          <div class="post__wrapper">
-            <button class="post__like-btn" type="button" aria-label="Лайк"></button>
-            <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">356</span></a>
-          </div>
-        </blockquote>
-      </article>
+      <div class="photography__inner">
+        <article class="post">
+          <h2 class="visually-hidden">Пост с фотографией</h2>
+          <a class="post__link" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg, img/photo-car-tablet@2x.jpg 2x">
+              <img src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Белый автомобиль">
+            </picture>
+          </a>
+          <blockquote class="post__description">
+            <cite class="post__author">Левон&#160;<span class="post__time">&#40;5 часов назад&#41;</span></cite>
+            <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <div class="post__wrapper">
+              <button class="post__like-btn" type="button" aria-label="Лайк"></button>
+              <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">356</span></a>
+            </div>
+          </blockquote>
+        </article>
 
-      <article class="photography__post post">
-        <h2 class="visually-hidden">Пост с фотографией</h2>
-        <a class="post__link" href="#">
-          <picture>
-            <img class="post__image" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Тут будет фото">
-          </picture>
-        </a>
-        <blockquote class="post__description">
-          <cite class="post__author">Антон&#160;<span class="post__time">&#40;12 часов назад&#41;</span></cite>
-          <p class="post__text">Соседи будут рады!</p>
-          <div class="post__wrapper">
-            <button class="post__like-btn" type="button" aria-label="Лайк"></button>
-            <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">666</span></a>
-          </div>
-        </blockquote>
-      </article>
+        <article class="post">
+          <h2 class="visually-hidden">Пост с фотографией</h2>
+          <a class="post__link" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg, img/photo-drumset-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg, img/photo-drumset-tablet@2x.jpg 2x">
+              <img src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Барабанная установка">
+            </picture>
+          </a>
+          <blockquote class="post__description">
+            <cite class="post__author">Антон&#160;<span class="post__time">&#40;12 часов назад&#41;</span></cite>
+            <p class="post__text">Соседи будут рады!</p>
+            <div class="post__wrapper">
+              <button class="post__like-btn" type="button" aria-label="Лайк"></button>
+              <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">666</span></a>
+            </div>
+          </blockquote>
+        </article>
 
-      <article class="photography__post post">
-        <h2 class="visually-hidden">Пост с фотографией</h2>
-        <a class="post__link" href="#">
-          <picture>
-            <img class="post__image" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Тут будет фото">
-          </picture>
-        </a>
-        <blockquote class="post__description">
-          <cite class="post__author">Борис&#160;<span class="post__time">&#40;20 часов назад&#41;</span></cite>
-          <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-          <div class="post__wrapper">
-            <button class="post__like-btn" type="button" aria-label="Лайк"></button>
-            <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">215</span></a>
-          </div>
-        </blockquote>
-      </article>
+        <article class="post">
+          <h2 class="visually-hidden">Пост с фотографией</h2>
+          <a class="post__link" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg, img/photo-window-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg, img/photo-window-tablet@2x.jpg 2x">
+              <img src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Облака в окне">
+            </picture>
+          </a>
+          <blockquote class="post__description">
+            <cite class="post__author">Борис&#160;<span class="post__time">&#40;20 часов назад&#41;</span></cite>
+            <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <div class="post__wrapper">
+              <button class="post__like-btn" type="button" aria-label="Лайк"></button>
+              <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">215</span></a>
+            </div>
+          </blockquote>
+        </article>
 
-      <article class="photography__post post">
-        <h2 class="visually-hidden">Пост с фотографией</h2>
-        <a class="post__link" href="#">
-          <picture>
-            <img class="post__image" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Тут будет фото">
-          </picture>
-        </a>
-        <blockquote class="post__description">
-          <cite class="post__author">Сергей&#160;<span class="post__time">&#40;25 часов назад&#41;</span></cite>
-          <p class="post__text">Самая кубанская в мире!</p>
-          <div class="post__wrapper">
-            <button class="post__like-btn" type="button" aria-label="Лайк"></button>
-            <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">4</span></a>
-          </div>
-        </blockquote>
-      </article>
+        <article class="post">
+          <h2 class="visually-hidden">Пост с фотографией</h2>
+          <a class="post__link" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg, img/photo-fair-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg, img/photo-fair-tablet@2x.jpg 2x">
+              <img src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Кубанская бахча">
+            </picture>
+          </a>
+          <blockquote class="post__description">
+            <cite class="post__author">Сергей&#160;<span class="post__time">&#40;25 часов назад&#41;</span></cite>
+            <p class="post__text">Самая кубанская в мире!</p>
+            <div class="post__wrapper">
+              <button class="post__like-btn" type="button" aria-label="Лайк"></button>
+              <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">4</span></a>
+            </div>
+          </blockquote>
+        </article>
 
-      <article class="photography__post post">
-        <h2 class="visually-hidden">Пост с фотографией</h2>
-        <a class="post__link" href="#">
-          <picture>
-            <img class="post__image" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Тут будет фото">
-          </picture>
-        </a>
-        <blockquote class="post__description">
-          <cite class="post__author">Максим&#160;<span class="post__time">&#40;40 часов назад&#41;</span></cite>
-          <p class="post__text">Где снег-то?</p>
-          <div class="post__wrapper">
-            <button class="post__like-btn" type="button" aria-label="Лайк"></button>
-            <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">150</span></a>
-          </div>
-        </blockquote>
-      </article>
+        <article class="post">
+          <h2 class="visually-hidden">Пост с фотографией</h2>
+          <a class="post__link" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg, img/photo-pov-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg, img/photo-pov-tablet@2x.jpg 2x">
+              <img src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Ноги над пропастью">
+            </picture>
+          </a>
+          <blockquote class="post__description">
+            <cite class="post__author">Максим&#160;<span class="post__time">&#40;40 часов назад&#41;</span></cite>
+            <p class="post__text">Где снег-то?</p>
+            <div class="post__wrapper">
+              <button class="post__like-btn" type="button" aria-label="Лайк"></button>
+              <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">150</span></a>
+            </div>
+          </blockquote>
+        </article>
 
-      <article class="photography__post post">
-        <h2 class="visually-hidden">Пост с фотографией</h2>
-        <a class="post__link" href="#">
-          <picture>
-            <img class="post__image" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Тут будет фото">
-          </picture>
-        </a>
-        <blockquote class="post__description">
-          <cite class="post__author">Надежда&#160;<span class="post__time">&#40;45 часов назад&#41;</span></cite>
-          <p class="post__text">Всем GM и взаимные лайки!</p>
-          <div class="post__wrapper">
-            <button class="post__like-btn" type="button" aria-label="Лайк"></button>
-            <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">2560</span></a>
-          </div>
-        </blockquote>
-      </article>
+        <article class="post post--last">
+          <h2 class="visually-hidden">Пост с фотографией</h2>
+          <a class="post__link" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg, img/photo-wing-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg, img/photo-wing-tablet@2x.jpg 2x">
+              <img src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Крыло самолета">
+            </picture>
+          </a>
+          <blockquote class="post__description">
+            <cite class="post__author">Надежда&#160;<span class="post__time">&#40;45 часов назад&#41;</span></cite>
+            <p class="post__text">Всем GM и взаимные лайки!</p>
+            <div class="post__wrapper">
+              <button class="post__like-btn" type="button" aria-label="Лайк"></button>
+              <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">2560</span></a>
+            </div>
+          </blockquote>
+        </article>
+      </div>
 
-      <p class="photography__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
-    </div>
+      <p class="photography__text photography__text--bottom">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+    </section>
 
-    <section class="page__editor editor">
+    <section class="editor">
       <h2 class="visually-hidden">Редактируй и выкладывай свои фото прямо сейчас</h2>
-      <div class="editor__window">
+      <div class="editor__img">
         <picture>
-          <img src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Тут будет фото">
+          <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x">
+          <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Зимняя дорога">
         </picture>
       </div>
       <form class="editor__form" action="https://echo.htmlacademy.ru" method="post">
         <div class="editor__form-wrapper">
           <button class="editor__icon-btn editor__icon-btn--photo-crop" type="button" aria-label="Обрезка">
-            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
               <path fill="none" d="M0,0h48v48H0V0z" />
               <path class="editor__icon-color" fill-opacity="0.3" d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z" />
             </svg>
           </button>
           <button class="editor__icon-btn editor__icon-btn--photo-fill" type="button" aria-label="Заливка">
-            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
               <path fill="none" d="M0,0h48v48H0V0z" />
               <path class="editor__icon-color" fill-opacity="0.3" d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z" />
               <rect class="editor__icon-color" fill-opacity="0.3" y="40" width="48" height="3" />
             </svg>
           </button>
           <button class="editor__icon-btn editor__icon-btn--photo-contrast" type="button" aria-label="Контраст">
-            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="-35 -8 32 32">
               <path class="editor__icon-color" fill-opacity="0.3" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z" />
               <path class="editor__icon-color" fill-opacity="0.3" d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519" />
             </svg>

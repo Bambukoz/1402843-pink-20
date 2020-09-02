@@ -1,13 +1,15 @@
 .editor {
+  @include page-wrapper-mobile;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $background-primary;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.editor__window {
+.editor__img {
   margin-bottom: 32px;
 }
 
@@ -20,7 +22,8 @@
   display: flex;
   justify-content: center;
   position: relative;
-  padding-bottom: 73px;
+  padding-top: 1px;
+  padding-bottom: 72px;
   margin-bottom: 39px;
 
   &::after {
@@ -68,6 +71,7 @@
 }
 
 .editor__input-btn {
+  @include btn-reset;
   position: absolute;
   top: -5px;
   left: 81%;
@@ -95,15 +99,16 @@
   border-radius: 30px;
 
   &--submit {
-    padding: 16px 88px 15px 87px;
+    width: 280px;
+    padding: 15px 0 16px;
     margin-bottom: 12px;
   }
 
   &--reset {
-    color: $secondary;
+    width: 280px;
     border-color: $secondary;
     opacity: 0.1;
-    padding: 16px 101px 15px 100px;
+    padding: 16px 0 15px;
     margin-bottom: 21px;
   }
 }

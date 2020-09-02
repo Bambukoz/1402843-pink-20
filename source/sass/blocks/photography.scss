@@ -1,37 +1,82 @@
 .photography {
-  margin-bottom: 42px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 17px;
 }
 
 .photography__lead {
+  @include page-wrapper-mobile;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   background-color: $background-secondary;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 24px 0 76px;
+  padding-top: 94px;
+  padding-bottom: 77px;
   margin-bottom: 44px;
+
+  @include tablet {
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    padding-top: 176px;
+    padding-bottom: 128px;
+    margin-bottom: 91px;
+  }
 }
 
 .photography__title {
   @include style-reset;
+  width: 172px;
   font-size: 24px;
   line-height: 33px;
   font-weight: 300;
   text-align: center;
   color: $white;
-  padding: 0 74px;
-  margin: 74px 0 0;
+
+  @include tablet {
+    width: 358px;
+    font-size: 50px;
+    line-height: 68px;
+  }
+}
+
+.photography__inner {
+  @include page-wrapper-mobile;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 300px 300px;
+  }
 }
 
 .photography__text {
   @include style-reset;
+  width: 250px;
   font-size: 14px;
   text-align: center;
   color: $black;
-  padding: 0 33px;
   margin-bottom: 50px;
 
-  &:last-of-type {
-    margin-bottom: 0;
+  @include tablet {
+    width: 570px;
+    font-size: 18px;
+    margin-bottom: 77px;
+  }
+
+  &--bottom {
+    width: 260px;
+    margin-bottom: 25px;
+
+    @include tablet {
+      width: 421px;
+    }
   }
 }
