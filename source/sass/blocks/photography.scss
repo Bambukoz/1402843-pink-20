@@ -14,8 +14,7 @@
   background-color: $background-secondary;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: center top;
   padding-top: 94px;
   padding-bottom: 77px;
   margin-bottom: 44px;
@@ -54,6 +53,8 @@
   @include tablet {
     display: grid;
     grid-template-columns: 300px 300px;
+    gap: 20px;
+    margin-bottom: 64px;
   }
 }
 
@@ -77,6 +78,7 @@
 
     @include tablet {
       width: 421px;
+      margin-bottom: 53px;
     }
   }
 }

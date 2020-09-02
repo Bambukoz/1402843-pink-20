@@ -41,6 +41,7 @@
   color: $white;
   text-align: center;
   padding: 15px 20px;
+  cursor: default;
 
   @include desktop {
     font-size: 18px;
@@ -48,5 +49,9 @@
     font-weight: 400;
     text-transform: none;
     padding: 0;
+  }
+
+  &[href] {
+    cursor: pointer;
   }
 }

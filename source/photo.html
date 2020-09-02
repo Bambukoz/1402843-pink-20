@@ -11,7 +11,7 @@
 <body class="page">
   <header class="page__header page-header page-header--nojs">
     <div class="page-header__top">
-      <a class="page-header__logo logo" aria-label="Логотип Pink">
+      <a class="page-header__logo logo" href="index.html" aria-label="Логотип Pink">
         <svg xmlns="http://www.w3.org/2000/svg" width="74" height="22">
           <g>
             <path fill="#FFFFFF" d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z" />
@@ -23,7 +23,7 @@
           </g>
         </svg>
       </a>
-      <a class="page-header__logo logo logo--tablet" aria-label="Логотип Pink">
+      <a class="page-header__logo logo logo--tablet" href="index.html" aria-label="Логотип Pink">
         <svg xmlns="http://www.w3.org/2000/svg" width="146" height="40">
           <g>
             <path fill="#FFFFFF"
@@ -39,7 +39,7 @@
             d="M60.462,28.016c-0.002-0.009-5.175-21.365-5.175-21.365C54.926,4.303,52.694,0,46.688,0 c-0.829,0-1.5,0.671-1.5,1.5s0.671,1.5,1.5,1.5c4.856,0,5.575,3.729,5.639,4.143l4.767,19.701h-2.073 c-0.742-5.927-5.802-10.531-11.927-10.531s-11.186,4.604-11.927,10.531h-1.82c-0.741-5.927-5.802-10.531-11.927-10.531 S6.235,20.917,5.493,26.844H3.42L8.187,7.143C8.25,6.729,8.97,3,13.826,3c0.829,0,1.5-0.671,1.5-1.5S14.655,0,13.826,0 C7.82,0,5.588,4.303,5.227,6.651c0,0-5.173,21.356-5.175,21.365c-0.266,1.109,0.531,1.826,1.426,1.826 c0.012,0,0.023,0.004,0.036,0.004h3.982c0.741,5.926,5.802,10.53,11.927,10.53s11.185-4.604,11.927-10.53h1.814 c0.742,5.926,5.802,10.53,11.927,10.53s11.186-4.604,11.927-10.53H59c0.012,0,0.023-0.004,0.036-0.004 C59.931,29.842,60.728,29.125,60.462,28.016z M26.315,29.844c-0.715,4.272-4.421,7.531-8.896,7.531c-4.475,0-8.18-3.259-8.896-7.531 c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.715-4.271,4.421-7.531,8.896-7.531c4.475,0,8.18,3.26,8.896,7.531 c0.082,0.489,0.135,0.988,0.135,1.5S26.397,29.355,26.315,29.844z M51.99,29.844c-0.716,4.272-4.421,7.531-8.896,7.531 c-4.475,0-8.181-3.259-8.896-7.531c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.716-4.271,4.421-7.531,8.896-7.531 c4.475,0,8.181,3.26,8.896,7.531c0.082,0.489,0.135,0.988,0.135,1.5S52.072,29.355,51.99,29.844z" />
         </svg>
       </a>
-      <a class="page-header__logo logo logo--desktop" aria-label="Логотип Pink">
+      <a class="page-header__logo logo logo--desktop" href="index.html" aria-label="Логотип Pink">
         <svg xmlns="http://www.w3.org/2000/svg" width="146" height="40">
           <g>
             <path fill="#FFFFFF"
@@ -114,11 +114,11 @@
             <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама">
           </picture>
         </a>
-        <blockquote class="post__description">
+        <blockquote class="post__description post__description--panorama">
           <cite class="post__author">Анна&#160;<span class="post__time">&#40;5 минут назад&#41;</span></cite>
           <p class="post__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе,&nbsp;задавайте&nbsp;свои&nbsp;вопросы!</p>
-          <div class="post__wrapper">
-            <button class="post__like-btn" type="button" aria-label="Лайк"></button>
+          <div class="post__wrapper post__wrapper--panorama">
+            <button class="post__like-btn post__like-btn--panorama" type="button" aria-label="Лайк"></button>
             <a class="post__stats" href="#">Нравится:&#160;<span class="post__like-counter">215</span></a>
           </div>
         </blockquote>
@@ -253,39 +253,45 @@
         </picture>
       </div>
       <form class="editor__form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="editor__form-wrapper">
-          <button class="editor__icon-btn editor__icon-btn--photo-crop" type="button" aria-label="Обрезка">
+
+        <div class="editor__toggles">
+          <button class="editor__icon-btn editor__icon-btn--crop editor__icon-btn--active" type="button" aria-label="Обрезка">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
               <path fill="none" d="M0,0h48v48H0V0z" />
               <path class="editor__icon-color" fill-opacity="0.3" d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z" />
             </svg>
           </button>
-          <button class="editor__icon-btn editor__icon-btn--photo-fill" type="button" aria-label="Заливка">
+          <button class="editor__icon-btn editor__icon-btn--fill" type="button" aria-label="Заливка">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
               <path fill="none" d="M0,0h48v48H0V0z" />
               <path class="editor__icon-color" fill-opacity="0.3" d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z" />
               <rect class="editor__icon-color" fill-opacity="0.3" y="40" width="48" height="3" />
             </svg>
           </button>
-          <button class="editor__icon-btn editor__icon-btn--photo-contrast" type="button" aria-label="Контраст">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="-35 -8 32 32">
+          <button class="editor__icon-btn editor__icon-btn--contrast" type="button" aria-label="Контраст">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="-35 -8 31 32">
               <path class="editor__icon-color" fill-opacity="0.3" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z" />
               <path class="editor__icon-color" fill-opacity="0.3" d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519" />
             </svg>
           </button>
-          <div class="editor__input editor__input--photo-crop editor__input--active">
-            <div class="editor__input-range"></div>
-            <button class="editor__input-btn" type="button" aria-label="Меня можно двигать"></button>
-          </div>
-          <div class="editor__input editor__input--photo-fill">
-            <div class="editor__input-range"></div>
-            <button class="editor__input-btn" type="button" aria-label="Меня можно двигать"></button>
-          </div>
-          <div class="editor__input editor__input--photo-contrast">
-            <div class="editor__input-range"></div>
-            <button class="editor__input-btn" type="button" aria-label="Меня можно двигать"></button>
-          </div>
         </div>
+
+        <div class="editor__inputs">
+          <div class="editor__input editor__input--crop editor__input--active">
+            <div class="editor__input-range"></div>
+            <button class="editor__input-btn editor__input-btn--crop" type="button" aria-label="Меня можно двигать"></button>
+          </div>
+          <div class="editor__input editor__input--fill">
+            <div class="editor__input-range"></div>
+            <button class="editor__input-btn editor__input-btn--fill" type="button" aria-label="Меня можно двигать"></button>
+          </div>
+          <div class="editor__input editor__input--contrast">
+            <div class="editor__input-range"></div>
+            <button class="editor__input-btn editor__input-btn--contrast" type="button" aria-label="Меня можно двигать"></button>
+          </div>
+
+        </div>
+
         <button class="editor__btn editor__btn--submit btn" type="submit">Запостить</button>
         <button class="editor__btn editor__btn--reset btn" type="reset">Отмена</button>
       </form>
@@ -294,7 +300,7 @@
 
   <footer class="page__footer footer">
     <div class="footer__logo">
-      <a class="footer__link" href="#" aria-label="Логотип Pink">
+      <a class="footer__link" href="index.html" aria-label="Логотип Pink">
         <svg xmlns="http://www.w3.org/2000/svg" width="146" height="40" viewBox="0 0 146 40">
           <g>
             <path fill="#283645"
@@ -310,7 +316,7 @@
             d="M60.462,28.016c-0.002-0.009-5.175-21.365-5.175-21.365C54.926,4.303,52.694,0,46.688,0 c-0.829,0-1.5,0.671-1.5,1.5s0.671,1.5,1.5,1.5c4.856,0,5.575,3.729,5.639,4.143l4.767,19.701h-2.073 c-0.742-5.927-5.802-10.531-11.927-10.531s-11.186,4.604-11.927,10.531h-1.82c-0.741-5.927-5.802-10.531-11.927-10.531 S6.235,20.917,5.493,26.844H3.42L8.187,7.143C8.25,6.729,8.97,3,13.826,3c0.829,0,1.5-0.671,1.5-1.5S14.655,0,13.826,0 C7.82,0,5.588,4.303,5.227,6.651c0,0-5.173,21.356-5.175,21.365c-0.266,1.109,0.531,1.826,1.426,1.826 c0.012,0,0.023,0.004,0.036,0.004h3.982c0.741,5.926,5.802,10.53,11.927,10.53s11.185-4.604,11.927-10.53h1.814 c0.742,5.926,5.802,10.53,11.927,10.53s11.186-4.604,11.927-10.53H59c0.012,0,0.023-0.004,0.036-0.004 C59.931,29.842,60.728,29.125,60.462,28.016z M26.315,29.844c-0.715,4.272-4.421,7.531-8.896,7.531s-8.18-3.259-8.896-7.531 c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.715-4.271,4.421-7.531,8.896-7.531s8.18,3.26,8.896,7.531 c0.082,0.489,0.135,0.988,0.135,1.5S26.397,29.355,26.315,29.844z M51.99,29.844c-0.716,4.272-4.421,7.531-8.896,7.531 c-4.475,0-8.181-3.259-8.896-7.531c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.716-4.271,4.421-7.531,8.896-7.531 c4.475,0,8.181,3.26,8.896,7.531c0.082,0.489,0.135,0.988,0.135,1.5S52.072,29.355,51.99,29.844z" />
         </svg>
       </a>
-      <a class="footer__link footer__link--desktop" href="#" aria-label="Логотип Pink">
+      <a class="footer__link footer__link--desktop" href="index.html" aria-label="Логотип Pink">
         <svg xmlns="http://www.w3.org/2000/svg" width="146" height="40" viewBox="0 0 146 40">
           <g>
             <path fill="#283645"
