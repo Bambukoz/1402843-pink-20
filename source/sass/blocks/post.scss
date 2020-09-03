@@ -30,6 +30,11 @@
     @include tablet {
       top: 57px;
     }
+
+    @include desktop {
+      top: 54px;
+      right: 130px;
+    }
   }
 
   &--last {
@@ -50,6 +55,10 @@
     height: 300px;
   }
 
+  @include desktop {
+    height: 400px;
+  }
+
   &--panorama {
     width: 100%;
     height: auto;
@@ -58,6 +67,10 @@
 
     @include tablet {
       width: 106%;
+    }
+
+    @include desktop {
+      width: 100%;
     }
   }
 
@@ -83,11 +96,22 @@
     padding-bottom: 19px;
   }
 
+  @include desktop {
+    padding-top: 24px;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
   &--panorama {
     @include tablet {
       width: 620px;
       min-height: 121px;
       margin-bottom: 50px;
+    }
+
+    @include desktop {
+      width: 940px;
+      min-height: 96px;
     }
   }
 }
@@ -162,9 +186,12 @@
     left: 227px;
   }
 
+  @include desktop {
+    left: 229px;
+  }
+
   &--panorama {
     @include tablet {
-      top: 11px;
       left: 105px;
     }
   }

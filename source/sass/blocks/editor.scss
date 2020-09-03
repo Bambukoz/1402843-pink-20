@@ -6,13 +6,23 @@
   align-items: center;
   background-color: $background-primary;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 41px;
 
   @include tablet {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
     padding-top: 57px;
+    padding-bottom: 22px;
+  }
+
+  @include desktop {
+    width: 940px;
+    justify-content: flex-start;
+    padding-left: 80px;
+    padding-right: 60px;
+    padding-bottom: 25px;
+    margin: 0 auto 28px;
   }
 }
 
@@ -42,6 +52,12 @@
     min-height: 200px;
     padding-left: 36px;
   }
+
+  @include desktop {
+    flex-direction: row;
+    width: 500px;
+    padding-left: 90px;
+  }
 }
 
 .editor__toggles {
@@ -61,6 +77,14 @@
     justify-content: space-between;
     padding-right: 0;
     padding-left: 0;
+    cursor: default;
+  }
+
+  @include desktop {
+    width: 44px;
+    min-height: 189px;
+    top: -4px;
+    left: 88px;
   }
 }
 
@@ -78,10 +102,20 @@
     height: 16px;
   }
 
+  @include desktop {
+    width: 48px;
+    height: 48px;
+  }
+
   & svg {
     @include tablet {
       width: 24px;
       height: 24px;
+    }
+
+    @include desktop {
+      width: 48px;
+      height: 48px;
     }
   }
 
@@ -89,17 +123,29 @@
     @include tablet {
       height: 13px;
     }
+
+    @include desktop {
+      height: 48px;
+    }
   }
 
   &--contrast {
     @include tablet {
       height: 16px;
     }
+
+    @include desktop {
+      height: 44px;
+    }
   }
 
   &--contrast svg {
     @include tablet {
       height: 16px;
+    }
+
+    @include desktop {
+      height: 32px;
     }
   }
 }
@@ -132,6 +178,11 @@
     padding: 9px 1px 18px 47px;
     margin-bottom: 75px;
   }
+
+  @include desktop {
+    padding-left: 62px;
+    margin-bottom: 154px;
+  }
 }
 
 .editor__input {
@@ -152,18 +203,8 @@
     transform: none;
   }
 
-  &--active {
-    display: block;
-
-    @include tablet {
-      display: flex;
-    }
-  }
-
-  &--fill {
-    @include tablet {
-      margin-top: 3px;
-    }
+  @include desktop {
+    width: 288px;
   }
 
   &::after {
@@ -180,6 +221,31 @@
       bottom: -26px;
       left: -55px;
     }
+
+    @include desktop {
+      width: 410px;
+      left: -92px;
+    }
+  }
+
+  &--active {
+    display: block;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &--fill {
+    @include tablet {
+      margin-top: 3px;
+    }
+  }
+
+  &--contrast::after {
+    @include desktop {
+      display: none;
+    }
   }
 }
 
@@ -191,6 +257,10 @@
 
   @include tablet {
     width: 202px;
+  }
+
+  @include desktop {
+    width: 288px;
   }
 }
 
@@ -212,9 +282,17 @@
     top: 4px;
   }
 
+  @include desktop {
+    top: 3px;
+  }
+
   &--crop {
     @include tablet {
       left: 72%;
+    }
+
+    @include desktop {
+      left: 24%;
     }
   }
 
@@ -222,11 +300,19 @@
     @include tablet {
       left: 13%;
     }
+
+    @include desktop {
+      left: 86%;
+    }
   }
 
   &--contrast {
     @include tablet {
       left: 48%;
+    }
+
+    @include desktop {
+      left: 56%;
     }
   }
 }
@@ -245,13 +331,21 @@
     width: 260px;
   }
 
+  @include desktop {
+    width: 183px;
+  }
+
   &--submit {
     padding: 15px 0 16px;
     margin-bottom: 12px;
 
     @include tablet {
-      width: 260px;
       margin-bottom: 24px;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+      margin-right: 44px;
     }
   }
 
