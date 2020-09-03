@@ -98,11 +98,13 @@
   </header>
 
   <main class="page__main">
-    <div class="page__contest contest">
+    <section class="page__contest contest">
       <div class="contest__lead">
         <h1 class="contest__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
-      <p class="contest__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+
+      <p class="contest__text">Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!</p>
+
       <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post">
         <div class="form__box">
           <div class="form__item">
@@ -164,7 +166,7 @@
           </div>
         </div>
         <div class="form__box form__box--background">
-          <p class="form__box-legend">С каким приложением путешествовали?</p>
+          <p class="form__box-legend form__box-legend--radio">С каким приложением путешествовали?</p>
           <div class="form__option-group option-group option-group--radio">
             <label class="option-group__item" aria-label="Pink для iOS">
               <input class="option-group__input" type="radio" name="operation system" value="iOS" checked>
@@ -184,21 +186,21 @@
           </div>
         </div>
         <div class="form__box">
-          <div class="form__item">
-            <label class="form__box-legend form__box-legend--textarea" for="feedback-text">Опишите свои эмоции</label>
-            <textarea class="form__textarea" id="feedback-text" rows="6" cols="20" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          </div>
+
+          <label class="form__box-legend form__box-legend--textarea" for="feedback-text">Опишите свои эмоции</label>
+          <textarea class="form__textarea" id="feedback-text" rows="6" cols="20" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+
         </div>
         <button class="form__submit-btn btn" type="submit">Отправить форму</button>
       </form>
       <p class="contest__note"><span>*</span> — обязательные поля</p>
-    </div>
+    </section>
   </main>
 
   <footer class="page__footer footer">
     <div class="footer__logo">
       <a class="footer__link" href="index.html" aria-label="Логотип Pink">
-        <svg xmlns="http://www.w3.org/2000/svg" width="146" height="40" viewBox="0 0 146 40">
+        <svg xmlns="http://www.w3.org/2000/svg" width="146" height="40">
           <g>
             <path fill="#283645"
               d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.063 c0,4.86-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.287-1.289,1.287c-0.676,0-1.256-0.58-1.256-1.287L71.874,18.661 L71.874,18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.062c0-3.221-2.414-4.894-6.053-4.894h-5.699v9.917h5.57V29.641 z" />
@@ -214,7 +216,7 @@
         </svg>
       </a>
       <a class="footer__link footer__link--desktop" href="index.html" aria-label="Логотип Pink">
-        <svg xmlns="http://www.w3.org/2000/svg" width="146" height="40" viewBox="0 0 146 40">
+        <svg xmlns="http://www.w3.org/2000/svg" width="146" height="40">
           <g>
             <path fill="#283645"
               d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.063 c0,4.86-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.287-1.289,1.287c-0.676,0-1.256-0.58-1.256-1.287L71.874,18.661 L71.874,18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.062c0-3.221-2.414-4.894-6.053-4.894h-5.699v9.917h5.57V29.641 z" />

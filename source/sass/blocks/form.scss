@@ -1,15 +1,28 @@
 .form {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 34px;
 }
 
 .form__box {
-  padding: 0 20px;
-  margin-bottom: 42px;
+  @include page-wrapper-mobile;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
 
   &--background {
+    @include page-wrapper-mobile;
     background-color: $background-primary;
-    padding-top: 40px;
+    padding-top: 39px;
     margin-bottom: 32px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 42px;
   }
 }
 
@@ -32,21 +45,26 @@
   border: 2px solid $border-white;
   border-radius: 1px;
   line-height: 30px;
-  padding: 13px 20px 15px;
+  padding: 14px 20px;
 }
 
 .form__box-legend {
   @include style-reset;
+  width: 220px;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   color: $primary;
-  padding: 0 14px;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
+
+  &--radio {
+    margin-bottom: 39px;
+  }
 
   &--textarea {
-    margin: 6px 0 16px;
+    margin-top: 6px;
+    margin-bottom: 16px;
   }
 }
 
@@ -55,6 +73,7 @@
 }
 
 .form__textarea {
+  width: 280px;
   border: 2px solid $border-white;
   border-radius: 1px;
   font-size: 18px;
@@ -76,6 +95,5 @@
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 1px;
-  padding: 21px 23px 22px 22px;
-  margin: 0 auto 34px;
+  padding: 21px 0 22px;
 }
