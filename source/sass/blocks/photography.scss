@@ -102,10 +102,12 @@
 
   &--bottom {
     width: 260px;
+    margin-top: 23px;
     margin-bottom: 25px;
 
     @include tablet {
       width: 421px;
+      margin-top: 0;
       margin-bottom: 53px;
     }
   }
