@@ -39,8 +39,7 @@
 }
 
 .post__link {
-  width: 280px;
-  height: 180px;
+  width: 100%;
 
   @include tablet {
     width: 300px;
@@ -68,12 +67,13 @@
 
   & img {
     width: 100%;
+    height: auto;
   }
 }
 
 .post__description {
   @include style-reset;
-  width: 280px;
+  width: 100%;
   background-color: $background-primary;
   padding: 18px 0 17px;
 
