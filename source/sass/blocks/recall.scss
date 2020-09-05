@@ -52,12 +52,17 @@
 }
 
 .recall__btn {
-  @include btn-reset;
-  width: 22px;
-  height: 42px;
-  position: absolute;
-  top: 141px;
-  opacity: 0.3;
+  display: none;
+
+  @include desktop {
+    @include btn-reset;
+    display: block;
+    width: 22px;
+    height: 42px;
+    position: absolute;
+    top: 141px;
+    opacity: 0.3;
+  }
 
   &--left {
     left: 130px;

@@ -4,29 +4,61 @@
   flex-direction: column;
 
   &--checkbox {
-    padding-bottom: 49px;
+    padding-bottom: 41px;
+
+    @include tablet {
+      padding-bottom: 47px;
+    }
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: 260px 240px 210px;
+      grid-template-rows: min-content;
+      gap: 42px 55px;
+    }
   }
 
   &--radio {
-    padding-bottom: 45px;
+    padding-bottom: 41px;
+
+    @include tablet {
+      padding-bottom: 53px;
+    }
   }
 }
 
 .option-group--checkbox > .option-group__item {
-  margin-bottom: 52px;
+  margin-bottom: 42px;
+
+  @include desktop {
+    margin-bottom: 0;
+  }
 }
 
 .option-group--radio > .option-group__item {
-  margin-bottom: 45px;
+  margin-bottom: 35px;
+
+  @include desktop {
+    margin-bottom: 36px;
+  }
 }
 
 .option-group__item {
   width: 100%;
+  min-height: 40px;
   display: flex;
   position: relative;
 
   &:last-of-type {
     margin-bottom: 0;
+  }
+
+  @include desktop {
+    width: 260px;
+  }
+
+  &:nth-child(2n) {
+    grid-row: 2;
   }
 }
 
@@ -42,7 +74,7 @@
 
 .option-group__input[type="checkbox"] ~ .option-group__element {
   position: absolute;
-  top: -2px;
+  top: 0;
   left: 0;
   width: 39px;
   height: 39px;
@@ -52,28 +84,34 @@
 }
 
 .option-group__input[type="checkbox"] ~ .option-group__label {
-  padding-left: 57px;
+  line-height: 39px;
+  padding-left: 59px;
 }
 
 .option-group__input[type="checkbox"]:checked ~ .option-group__element {
   background-image: url("../../img/icon-checked.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 7px 9px;
 }
 
 .option-group__input[type="radio"] ~ .option-group__element {
   position: absolute;
-  top: -5px;
-  left: 1px;
-  width: 39px;
-  height: 39px;
+  top: 0;
+  left: 0;
+  width: 41px;
+  height: 41px;
   background-color: $white;
   border: 2px solid $border-white;
   border-radius: 50%;
 }
 
 .option-group__input[type="radio"] ~ .option-group__label {
+  line-height: 40px;
   padding-left: 70px;
+
+  @include tablet {
+    padding-left: 61px;
+  }
 }
 
 .option-group__input[type="radio"]:checked ~ .option-group__element {
@@ -85,5 +123,6 @@
 
 .option-group__label {
   font-size: 18px;
+  line-height: 44px;
   color: $secondary;
 }

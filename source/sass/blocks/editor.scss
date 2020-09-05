@@ -1,51 +1,188 @@
 .editor {
+  @include page-wrapper-mobile;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $background-primary;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 41px;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 57px;
+    padding-bottom: 22px;
+  }
+
+  @include desktop {
+    width: 940px;
+    justify-content: flex-start;
+    padding-left: 80px;
+    padding-right: 60px;
+    padding-bottom: 25px;
+    margin: 0 auto 75px;
+  }
 }
 
-.editor__window {
+.editor__img {
+  width: 280px;
+  height: 382px;
   margin-bottom: 32px;
+
+  @include tablet {
+    width: 300px;
+    height: 400px;
+  }
 }
 
 .editor__form {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 1px;
+
+  @include tablet {
+    width: 320px;
+    flex-wrap: wrap;
+    min-height: 200px;
+    padding-left: 36px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    width: 500px;
+    padding-left: 90px;
+  }
 }
 
-.editor__form-wrapper {
+.editor__toggles {
   width: 100%;
   display: flex;
-  justify-content: center;
-  position: relative;
-  padding-bottom: 73px;
-  margin-bottom: 39px;
+  justify-content: space-around;
+  padding-left: 20px;
+  padding-right: 26px;
 
-  &::after {
-    content: "";
+  @include tablet {
+    width: 24px;
+    min-height: 162px;
     position: absolute;
-    top: 100%;
-    left: -20px;
-    height: 1px;
-    width: calc(100% + 40px);
-    background-color: rgba($secondary, 0.1);
+    top: 9px;
+    left: 48px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 0;
+    padding-left: 0;
+    cursor: default;
+  }
+
+  @include desktop {
+    width: 44px;
+    min-height: 189px;
+    top: -4px;
+    left: 88px;
   }
 }
 
 .editor__icon-btn {
+  width: 48px;
+  height: 48px;
   border: none;
   background-color: transparent;
   font-size: 0;
   line-height: 0;
   padding: 0;
-  margin: 0 24px 0 10px;
+
+  @include tablet {
+    width: 24px;
+    height: 16px;
+  }
+
+  @include desktop {
+    width: 48px;
+    height: 48px;
+  }
+
+  & svg {
+    @include tablet {
+      width: 24px;
+      height: 24px;
+    }
+
+    @include desktop {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &--fill {
+    @include tablet {
+      height: 13px;
+    }
+
+    @include desktop {
+      height: 48px;
+    }
+  }
+
+  &--contrast {
+    @include tablet {
+      height: 16px;
+    }
+
+    @include desktop {
+      height: 44px;
+    }
+  }
+
+  &--contrast svg {
+    @include tablet {
+      height: 16px;
+    }
+
+    @include desktop {
+      height: 32px;
+    }
+  }
 }
 
-.editor__icon-btn--photo-crop .editor__icon-color {
+.editor__icon-btn--active .editor__icon-color {
   fill: $primary;
   fill-opacity: 1;
+}
+
+.editor__icon-color {
+  @include tablet {
+    fill: $primary;
+    fill-opacity: 1;
+  }
+}
+
+.editor__inputs {
+  width: 100%;
+  min-height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 36px;
+
+  @include tablet {
+    min-height: 190px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 1px 18px 47px;
+    margin-bottom: 75px;
+  }
+
+  @include desktop {
+    padding-left: 62px;
+    margin-bottom: 154px;
+  }
 }
 
 .editor__input {
@@ -55,8 +192,60 @@
   left: 50%;
   transform: translateX(-50%);
 
+  @include tablet {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 202px;
+    height: 20px;
+    transform: none;
+  }
+
+  @include desktop {
+    width: 288px;
+  }
+
+  &::after {
+    content: "";
+    width: 659px;
+    height: 1px;
+    position: absolute;
+    bottom: -35px;
+    left: -211px;
+    background-color: rgba($secondary, 0.1);
+
+    @include tablet {
+      width: 275px;
+      bottom: -26px;
+      left: -55px;
+    }
+
+    @include desktop {
+      width: 410px;
+      left: -92px;
+    }
+  }
+
   &--active {
     display: block;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &--fill {
+    @include tablet {
+      margin-top: 3px;
+    }
+  }
+
+  &--contrast::after {
+    @include desktop {
+      display: none;
+    }
   }
 }
 
@@ -65,9 +254,18 @@
   width: 240px;
   height: 2px;
   background-color: $secondary;
+
+  @include tablet {
+    width: 202px;
+  }
+
+  @include desktop {
+    width: 288px;
+  }
 }
 
 .editor__input-btn {
+  @include btn-reset;
   position: absolute;
   top: -5px;
   left: 81%;
@@ -79,13 +277,48 @@
   font-size: 0;
   line-height: 0;
   padding: 0;
+
+  @include tablet {
+    top: 4px;
+  }
+
+  @include desktop {
+    top: 3px;
+  }
+
+  &--crop {
+    @include tablet {
+      left: 72%;
+    }
+
+    @include desktop {
+      left: 24%;
+    }
+  }
+
+  &--fill {
+    @include tablet {
+      left: 13%;
+    }
+
+    @include desktop {
+      left: 86%;
+    }
+  }
+
+  &--contrast {
+    @include tablet {
+      left: 48%;
+    }
+
+    @include desktop {
+      left: 56%;
+    }
+  }
 }
 
 .editor__btn {
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 280px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
@@ -94,16 +327,32 @@
   border: 3px solid $primary;
   border-radius: 30px;
 
+  @include tablet {
+    width: 260px;
+  }
+
+  @include desktop {
+    width: 183px;
+  }
+
   &--submit {
-    padding: 16px 88px 15px 87px;
+    padding: 15px 0 16px;
     margin-bottom: 12px;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+      margin-right: 44px;
+    }
   }
 
   &--reset {
-    color: $secondary;
     border-color: $secondary;
     opacity: 0.1;
-    padding: 16px 101px 15px 100px;
-    margin-bottom: 21px;
+    color: $secondary;
+    padding: 16px 0 15px;
   }
 }
