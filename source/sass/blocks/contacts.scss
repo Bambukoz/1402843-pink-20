@@ -4,7 +4,6 @@
 
   @include desktop {
     @include page-wrapper-desktop;
-    margin-bottom: 47px;
   }
 }
 
@@ -16,12 +15,13 @@
   font-weight: 300;
   text-align: center;
   color: $secondary;
-  margin: 0 auto 33px;
+  margin: 0 auto 34px;
 
   @include tablet {
     width: 370px;
     font-size: 40px;
     line-height: 54px;
+    margin-bottom: 33px;
   }
 
   @include desktop {
@@ -35,7 +35,7 @@
 .contacts__list {
   @include list-reset;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 
   @include tablet {
     width: 100%;
@@ -43,11 +43,11 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
   }
 
   @include desktop {
-    margin-bottom: 18px;
+    margin-bottom: 10px;
   }
 }
 
@@ -57,7 +57,7 @@
   @include tablet {
     width: 48%;
     min-width: 280px;
-    margin-bottom: 43px;
+    margin-bottom: 42px;
   }
 
   @include desktop {
@@ -66,10 +66,10 @@
   }
 
   &:nth-child(2) {
-    margin-bottom: 22px;
+    margin-bottom: 21px;
 
     @include tablet {
-      margin-bottom: 43px;
+      margin-bottom: 42px;
     }
 
     @include desktop {
@@ -119,29 +119,44 @@
 
 .contacts__map {
   position: relative;
-  min-height: 216px;
-  background-image: url("../../img/bg-map-mobile@1x.png");
+  min-height: 218px;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: bottom;
   margin-left: -$padding-mobile;
   margin-right: -$padding-mobile;
   overflow: hidden;
 
+  @include retina {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+    background-size: $mobile-width;
+  }
+
   @include tablet {
-    min-height: 367px;
-    background-image: url("../../img/bg-map-tablet@1x.jpg");
-    background-position-y: -433px;
+    min-height: 374px;
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+    background-position: 0 0;
     margin-left: -$padding-mobile;
     margin-right: -$padding-mobile;
+
+    @include retina {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+      background-size: $tablet-width;
+    }
   }
 
   @include desktop {
     min-width: 1200px;
-    min-height: 492px;
-    background-image: url("../../img/bg-map-desktop@1x.jpg");
+    min-height: 502px;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background-size: cover;
     margin-left: -$padding-desktop;
     margin-right: -$padding-desktop;
+
+    @include retina {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+      background-size: $desktop-width;
+    }
   }
 
   &::before {
@@ -153,34 +168,34 @@
     top: -72px;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url("../../img/bg-triangle-white-footer.svg");
+    background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
     background-position: top;
 
     @include tablet {
-      top: -63px;
+      top: -55px;
     }
 
     @include desktop {
       min-width: 1439px;
-      top: -30px;
       width: 100%;
-      background-image: url("../../img/bg-triangle-white-footer-desktop.svg");
+      top: -20px;
+      background-image: url("../img/bg-triangle-white-footer-desktop.svg");
     }
   }
 }
 
 .contacts__interactive-map {
   width: 100%;
-  min-height: 216px;
+  min-height: 217px;
   border: none;
   margin-bottom: -10px;
 
   @include tablet {
-    min-height: 367px;
+    min-height: 374px;
   }
 
   @include desktop {
-    min-height: 494px;
+    min-height: 502px;
   }
 }

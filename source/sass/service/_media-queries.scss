@@ -4,6 +4,12 @@
   }
 }
 
+@mixin retina {
+  @media (min-resolution: $retina-x2) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;

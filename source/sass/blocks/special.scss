@@ -95,4 +95,14 @@
     font-size: 18px;
     line-height: 30px;
   }
+
+  &:hover,
+  &:focus {
+    @include animation;
+    color: $secondary;
+  }
+
+  &:active {
+    color: rgba($secondary, 0.3);
+  }
 }

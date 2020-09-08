@@ -20,7 +20,7 @@
       content: "";
       width: 79px;
       height: 63px;
-      background-image: url("../../img/icon-quotes.svg");
+      background-image: url("../img/icon-quotes.svg");
       background-position: center;
       background-repeat: no-repeat;
       margin: 0 auto 49px;
@@ -62,18 +62,27 @@
     position: absolute;
     top: 141px;
     opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 
   &--left {
     left: 130px;
-    background-image: url("../../img/icon-review-arrow-left.svg");
+    background-image: url("../img/icon-review-arrow-left.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &--right {
     right: 130px;
-    background-image: url("../../img/icon-review-arrow-right.svg");
+    background-image: url("../img/icon-review-arrow-right.svg");
     background-repeat: no-repeat;
     background-position: center;
   }

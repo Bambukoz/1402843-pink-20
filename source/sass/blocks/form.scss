@@ -123,6 +123,8 @@
 
     @include tablet {
       padding-top: 45px;
+      padding-right: 58px;
+      padding-left: 58px;
     }
 
     @include desktop {
@@ -193,7 +195,7 @@
       width: 59px;
       height: 59px;
       background-color: $border-white;
-      background-image: url("../../img/icon-phone.svg");
+      background-image: url("../img/icon-phone.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 20px 19px;
@@ -218,7 +220,7 @@
       width: 59px;
       height: 59px;
       background-color: $border-white;
-      background-image: url("../../img/icon-mail.svg");
+      background-image: url("../img/icon-mail.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 18px 13px;
@@ -344,7 +346,7 @@
 }
 
 .form__textarea {
-  width: 280px;
+  width: 100%;
   border: 2px solid $border-white;
   border-radius: 1px;
   font-size: 18px;
@@ -355,14 +357,12 @@
   margin-bottom: 6px;
 
   @include tablet {
-    width: 500px;
     padding-top: 14px;
     padding-bottom: 25px;
     margin-bottom: 51px;
   }
 
   @include desktop {
-    width: 820px;
     height: 128px;
     padding-top: 13px;
     padding-bottom: 10px;
@@ -375,7 +375,7 @@
 }
 
 .form__submit-btn {
-  width: 280px;
+  width: 100%;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
