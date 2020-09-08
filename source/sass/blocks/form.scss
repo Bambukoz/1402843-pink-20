@@ -258,12 +258,23 @@
   border: 2px solid $border-white;
   border-radius: 1px;
   line-height: 30px;
+  outline: none;
   padding: 14px 20px;
 
   @include tablet {
     padding: 14px 59px 15px 20px;
     background-color: transparent;
     z-index: 1;
+  }
+
+  &:hover {
+    @include animation;
+    border-color: $secondary;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $primary;
   }
 }
 
@@ -353,6 +364,7 @@
   line-height: 30px;
   font-weight: 400;
   resize: none;
+  outline: none;
   padding: 13px 20px 34px;
   margin-bottom: 6px;
 
@@ -372,6 +384,16 @@
   &::placeholder {
     color: $secondary;
   }
+
+  &:hover {
+    @include animation;
+    border-color: $secondary;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $primary;
+  }
 }
 
 .form__submit-btn {
@@ -379,7 +401,7 @@
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #ffffff;
+  color: $white;
   border-radius: 1px;
   padding: 21px 0 22px;
   margin-bottom: 34px;
@@ -387,6 +409,21 @@
   @include tablet {
     width: 300px;
     margin: 0;
+  }
+
+  &:hover,
+  &:focus {
+    @include animation;
+    background-color: $green-hover;
+  }
+
+  &:active {
+    background-color: $green-hover;
+    color: rgba($white, 0.3);
+  }
+
+  &:disabled {
+    background-color: $border-white;
   }
 }
 

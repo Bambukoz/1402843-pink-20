@@ -60,6 +60,10 @@
 .page-header--nojs .page-header__main-nav,
 .page-header--open .page-header__main-nav {
   display: block;
+
+  @include desktop {
+    display: flex;
+  }
 }
 
 .page-header__toggle {
@@ -76,6 +80,37 @@
   outline: none;
   margin: -5px 0 6px;
 
+  & span {
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    border-radius: 1px;
+    background-color: $white;
+    right: 1px;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
+
+  &:hover span,
+  &:focus span {
+    background-color: $primary;
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
+
   @include tablet {
     margin: 8px -1px 0 0;
   }
@@ -87,28 +122,6 @@
 
 .page-header--nojs .page-header__toggle {
   display: none;
-}
-
-.page-header__toggle span {
-  position: absolute;
-  width: 50px;
-  height: 4px;
-  border-radius: 1px;
-  background-color: $white;
-  right: 1px;
-
-  &:nth-child(1) {
-    top: 0;
-  }
-
-  &:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &:nth-child(3) {
-    bottom: 0;
-  }
 }
 
 .page-header--open .page-header__toggle span {

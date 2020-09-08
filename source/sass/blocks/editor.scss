@@ -96,6 +96,7 @@
   font-size: 0;
   line-height: 0;
   padding: 0;
+  outline: none;
 
   @include tablet {
     width: 24px;
@@ -128,6 +129,12 @@
       width: 48px;
       height: 44px;
     }
+  }
+
+  &:hover svg,
+  &:focus svg {
+    @include animation;
+    fill: rgba($secondary, 0.5);
   }
 
   &--active svg {
@@ -305,6 +312,13 @@
       left: 56%;
     }
   }
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include animation;
+    background-color: $primary;
+  }
 }
 
 .editor__btn {
@@ -337,12 +351,35 @@
       margin-bottom: 0;
       margin-right: 44px;
     }
+
+    &:hover,
+    &:focus {
+      @include animation;
+      background-color: $primary;
+      color: $white;
+    }
+
+    &:active {
+      color: rgba($white, 0.3);
+    }
   }
 
   &--reset {
     border-color: $secondary;
-    opacity: 0.1;
     color: $secondary;
+    opacity: 0.1;
     padding: 16px 0 15px;
+
+    &:hover,
+    &:focus {
+      @include animation;
+      opacity: 0.3;
+    }
+
+    &:active {
+      background-color: $secondary;
+      color: rgba($white, 0.3);
+      opacity: 0.3;
+    }
   }
 }

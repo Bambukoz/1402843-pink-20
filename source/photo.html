@@ -3,13 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+  <link rel="preload" href="fonts/opensans.woff" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff" as="font">
 </head>
 
 <body class="page">
-  <header class="page__header page-header page-header--nojs">
+  <header class="page__header page-header page-header--nojs js-page-header">
     <div class="page-header__top">
       <a class="page-header__logo logo" href="index.html" aria-label="Логотип Pink">
         <svg width="74" height="22">
@@ -26,7 +32,7 @@
           <use xlink:href="img/svg-sprite.svg#logo-pink-white-desktop"></use>
         </svg>
       </a>
-      <button class="page-header__toggle" type="button" aria-label="открыть/закрыть меню">
+      <button class="page-header__toggle js-header-toggle" type="button" aria-label="открыть/закрыть меню">
         <span></span>
         <span></span>
         <span></span>
@@ -62,6 +68,9 @@
         <h2 class="visually-hidden">Пост с фотографией</h2>
         <a class="post__link post__link--panorama" href="#">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/panorama-desktop@1x.webp, img/webp/panorama-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/panorama-tablet@1x.webp, img/webp/panorama-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/panorama-mobile@1x.webp, img/webp/panorama-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
             <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама">
@@ -82,6 +91,9 @@
           <h2 class="visually-hidden">Пост с фотографией</h2>
           <a class="post__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/photo-car-desktop@1x.webp, img/webp/photo-car-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-car-tablet@1x.webp, img/webp/photo-car-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-car-mobile@1x.webp, img/webp/photo-car-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg, img/photo-car-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg, img/photo-car-tablet@2x.jpg 2x">
               <img src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Белый автомобиль">
@@ -101,6 +113,9 @@
           <h2 class="visually-hidden">Пост с фотографией</h2>
           <a class="post__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/photo-drumset-desktop@1x.webp, img/webp/photo-drumset-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-drumset-tablet@1x.webp, img/webp/photo-drumset-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-drumset-mobile@1x.webp, img/webp/photo-drumset-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg, img/photo-drumset-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg, img/photo-drumset-tablet@2x.jpg 2x">
               <img src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Барабанная установка">
@@ -120,6 +135,9 @@
           <h2 class="visually-hidden">Пост с фотографией</h2>
           <a class="post__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/photo-window-desktop@1x.webp, img/webp/photo-window-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-window-tablet@1x.webp, img/webp/photo-window-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-window-mobile@1x.webp, img/webp/photo-window-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg, img/photo-window-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg, img/photo-window-tablet@2x.jpg 2x">
               <img src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Облака в окне">
@@ -139,6 +157,9 @@
           <h2 class="visually-hidden">Пост с фотографией</h2>
           <a class="post__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/photo-fair-desktop@1x.webp, img/webp/photo-fair-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-fair-tablet@1x.webp, img/webp/photo-fair-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-fair-mobile@1x.webp, img/webp/photo-fair-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg, img/photo-fair-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg, img/photo-fair-tablet@2x.jpg 2x">
               <img src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Кубанская бахча">
@@ -158,6 +179,9 @@
           <h2 class="visually-hidden">Пост с фотографией</h2>
           <a class="post__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/photo-pov-desktop@1x.webp, img/webp/photo-pov-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-pov-tablet@1x.webp, img/webp/photo-pov-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-pov-mobile@1x.webp, img/webp/photo-pov-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg, img/photo-pov-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg, img/photo-pov-tablet@2x.jpg 2x">
               <img src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Ноги над пропастью">
@@ -177,6 +201,9 @@
           <h2 class="visually-hidden">Пост с фотографией</h2>
           <a class="post__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/photo-wing-desktop@1x.webp, img/webp/photo-wing-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-wing-tablet@1x.webp, img/webp/photo-wing-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-wing-mobile@1x.webp, img/webp/photo-wing-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg, img/photo-wing-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg, img/photo-wing-tablet@2x.jpg 2x">
               <img src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Крыло самолета">
@@ -200,6 +227,9 @@
       <h2 class="visually-hidden">Редактируй и выкладывай свои фото прямо сейчас</h2>
       <div class="editor__img">
         <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/photo-road-desktop@1x.webp, img/webp/photo-road-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-road-tablet@1x.webp, img/webp/photo-road-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/webp/photo-road-mobile@1x.webp, img/webp/photo-road-mobile@2x.webp 2x">
           <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x">
           <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x">
           <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Зимняя дорога">
@@ -292,7 +322,7 @@
       </a>
     </div>
   </footer>
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts.min.js"></script>
 </body>
 
 </html>

@@ -21,6 +21,7 @@
 
   @include retina {
     background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-position: center -3px;
   }
 
   @include tablet {
@@ -32,18 +33,20 @@
 
     @include retina {
       background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-position: center 2px;
     }
   }
 
   @include desktop {
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 2560px auto;
+    background-position: center top;
     padding-top: 169px;
     padding-bottom: 89px;
 
     @include retina {
       background-image: url("../img/bg-back-desktop@2x.jpg");
-      background-position: -679px 12px;
+      background-position: center 12px;
     }
   }
 }

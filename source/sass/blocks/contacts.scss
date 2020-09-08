@@ -115,6 +115,16 @@
   font-weight: 300;
   font-style: normal;
   color: $primary;
+
+  &[href]:hover,
+  &[href]:focus {
+    @include animation;
+    color: $secondary;
+  }
+
+  &[href]:active {
+    color: rgba($secondary, 0.3);
+  }
 }
 
 .contacts__map {

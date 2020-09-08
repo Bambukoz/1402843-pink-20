@@ -3,13 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Пинк</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+  <link rel="preload" href="fonts/opensans.woff" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff" as="font">
 </head>
 
 <body class="page">
-  <header class="page__header page-header page-header--nojs">
+  <header class="page__header page-header page-header--nojs js-page-header">
     <div class="page-header__top">
       <a class="page-header__logo logo" aria-label="Логотип Pink">
         <svg width="74" height="22">
@@ -26,7 +32,7 @@
           <use xlink:href="img/svg-sprite.svg#logo-pink-white-desktop"></use>
         </svg>
       </a>
-      <button class="page-header__toggle" type="button" aria-label="открыть/закрыть меню">
+      <button class="page-header__toggle js-header-toggle" type="button" aria-label="открыть/закрыть меню">
         <span></span>
         <span></span>
         <span></span>
@@ -58,6 +64,9 @@
             <h1 class="download__title">Взгляните на жизнь иначе!</h1>
             <div class="download__img">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/iphone-hand-desktop@1x.webp, img/webp/iphone-hand-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/iphone-hand-tablet@1x.webp, img/webp/iphone-hand-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/iphone-hand-mobile@1x.webp, img/webp/iphone-hand-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png, img/iphone-hand-desktop@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png, img/iphone-hand-tablet@2x.png 2x">
                 <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Телефон в руке">
@@ -107,6 +116,9 @@
             </div>
             <div class="features__img">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/iphone-screen-1-desktop@1x.webp, img/webp/iphone-screen-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/iphone-screen-1-tablet@1x.webp, img/webp/iphone-screen-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/iphone-screen-mobile@1x.webp, img/webp/iphone-screen-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/iphone-screen-1-desktop@1x.png, img/iphone-screen-1-desktop@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/iphone-screen-1-tablet@1x.png, img/iphone-screen-1-tablet@2x.png 2x">
                 <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Телефон с серым экраном">
@@ -120,6 +132,9 @@
             </div>
             <div class="features__img">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/iphone-screen-2-desktop@1x.webp, img/webp/iphone-screen-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/iphone-screen-2-tablet@1x.webp, img/webp/iphone-screen-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/iphone-screen-mobile@1x.webp, img/webp/iphone-screen-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/iphone-screen-2-desktop@1x.png, img/iphone-screen-2-desktop@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/iphone-screen-2-tablet@1x.png, img/iphone-screen-2-tablet@2x.png 2x">
                 <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Телефон с розовым экраном">
@@ -133,6 +148,9 @@
             </div>
             <div class="features__img features__img--visible">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/iphone-screen-3-desktop@1x.webp, img/webp/iphone-screen-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/iphone-screen-3-tablet@1x.webp, img/webp/iphone-screen-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/iphone-screen-mobile@1x.webp, img/webp/iphone-screen-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/iphone-screen-3-desktop@1x.png, img/iphone-screen-3-desktop@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png, img/iphone-screen-3-tablet@2x.png 2x">
                 <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Телефон со смайликом на экране">
@@ -327,7 +345,7 @@
     </div>
   </footer>
 
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts.min.js"></script>
 </body>
 
 </html>
