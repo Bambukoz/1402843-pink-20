@@ -1,5 +1,9 @@
 .main-nav {
   width: 100%;
+
+  @include desktop {
+    width: 620px;
+  }
 }
 
 .main-nav__list {

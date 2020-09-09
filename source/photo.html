@@ -235,41 +235,33 @@
           <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Зимняя дорога">
         </picture>
       </div>
-      <form class="editor__form" action="https://echo.htmlacademy.ru" method="post">
 
+      <form class="editor__form" action="https://echo.htmlacademy.ru" method="get">
         <div class="editor__toggles">
-          <button class="editor__icon-btn editor__icon-btn--crop editor__icon-btn--active" type="button" aria-label="Обрезка">
-            <svg width="44" height="44">
-              <use xlink:href="img/svg-sprite.svg#icon-editor-crop"></use>
-            </svg>
-          </button>
-          <button class="editor__icon-btn editor__icon-btn--fill" type="button" aria-label="Заливка">
-            <svg width="48" height="43">
-              <use xlink:href="img/svg-sprite.svg#icon-editor-fill"></use>
-            </svg>
-          </button>
-          <button class="editor__icon-btn editor__icon-btn--contrast" type="button" aria-label="Контраст">
-            <svg width="32" height="32">
-              <use xlink:href="img/svg-sprite.svg#icon-editor-contrast"></use>
-            </svg>
-          </button>
-        </div>
+          <div class="editor__range-labels">
+            <label class="editor__label editor__label--crop editor__label--active" for="crop">
+              <svg width="44" height="44">
+                <use xlink:href="img/svg-sprite.svg#icon-editor-crop"></use>
+              </svg>
+            </label>
+            <label class="editor__label editor__label--fill" for="fill">
+              <svg width="48" height="43">
+                <use xlink:href="img/svg-sprite.svg#icon-editor-fill"></use>
+              </svg>
+            </label>
+            <label class="editor__label editor__label--contrast" for="contrast">
+              <svg width="32" height="32">
+                <use xlink:href="img/svg-sprite.svg#icon-editor-contrast"></use>
+              </svg>
+            </label>
+          </div>
 
-        <div class="editor__inputs">
-          <div class="editor__input editor__input--crop editor__input--active">
-            <div class="editor__input-range"></div>
-            <button class="editor__input-btn editor__input-btn--crop" type="button" aria-label="Меня можно двигать"></button>
-          </div>
-          <div class="editor__input editor__input--fill">
-            <div class="editor__input-range"></div>
-            <button class="editor__input-btn editor__input-btn--fill" type="button" aria-label="Меня можно двигать"></button>
-          </div>
-          <div class="editor__input editor__input--contrast">
-            <div class="editor__input-range"></div>
-            <button class="editor__input-btn editor__input-btn--contrast" type="button" aria-label="Меня можно двигать"></button>
+          <div class="editor__range-inputs">
+            <input class="editor__input-range editor__input-range--active" id="crop" name="crop" type="range" min="0" max="100" step="1">
+            <input class="editor__input-range" id="fill" name="fill" type="range" min="0" max="100" step="1">
+            <input class="editor__input-range" id="contrast" name="contrast" type="range" min="0" max="100" step="1">
           </div>
         </div>
-
         <button class="editor__btn editor__btn--submit btn" type="submit">Запостить</button>
         <button class="editor__btn editor__btn--reset btn" type="reset">Отмена</button>
       </form>

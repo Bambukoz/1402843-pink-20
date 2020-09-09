@@ -11,8 +11,11 @@
 
   @include desktop {
     @include page-wrapper-desktop;
+    max-width: 1200px;
     position: relative;
     margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &::before {
@@ -60,7 +63,7 @@
     width: 22px;
     height: 42px;
     position: absolute;
-    top: 141px;
+    top: 42%;
     opacity: 0.3;
 
     &:hover,
@@ -98,6 +101,10 @@
     font-size: 18px;
     margin-bottom: 36px;
     order: 1;
+  }
+
+  @include desktop {
+    width: 687px;
   }
 }
 

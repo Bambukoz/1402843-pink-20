@@ -56,9 +56,11 @@
   @include desktop {
     width: 260px;
   }
+}
 
-  &:nth-child(2n) {
-    grid-row: 2;
+.option-group--checkbox .option-group__item:nth-child(2n) {
+  @include desktop {
+    order: 2;
   }
 }
 

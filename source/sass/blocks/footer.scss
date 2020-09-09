@@ -15,20 +15,23 @@
 
   @include desktop {
     @include page-wrapper-desktop;
+    max-width: 1200px;
     justify-content: space-between;
     padding-top: 46px;
     padding-bottom: 74px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &--index {
     @include desktop {
-      padding-top: 69px;
+      padding-top: 67px;
     }
   }
 
   &--photo {
     @include desktop {
-      padding-top: 98px;
+      padding-top: 97px;
     }
   }
 
