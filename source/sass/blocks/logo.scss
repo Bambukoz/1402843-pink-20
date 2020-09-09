@@ -25,4 +25,19 @@
       display: block;
     }
   }
+
+  & svg {
+    fill: $white;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    @include animation;
+    fill: $primary;
+  }
+
+  &:active svg {
+    fill: $white;
+    opacity: 0.3;
+  }
 }

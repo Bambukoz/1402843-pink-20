@@ -14,16 +14,10 @@
   width: 100%;
   overflow: hidden;
   margin-top: -69px;
-  margin-bottom: 40px;
   z-index: 1;
 
   @include tablet {
     margin-top: -110px;
-    margin-bottom: 32px;
-  }
-
-  @include desktop {
-    margin-bottom: 18px;
   }
 }
 

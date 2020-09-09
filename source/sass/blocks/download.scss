@@ -7,16 +7,26 @@
   @include tablet {
     position: relative;
     display: flex;
-    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center -2px;
     background-size: cover;
     padding-bottom: 78px;
+
+    @include retina {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-position: center top;
+    }
   }
 
   @include desktop {
-    background-image: url("../../img/bg-back-desktop@1x.jpg");
-    padding-bottom: 79px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    padding-bottom: 80px;
+
+    @include retina {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-position: center 12px;
+    }
   }
 }
 
@@ -49,13 +59,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center 1px;
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 69px;
   margin-right: -$padding-mobile;
   margin-bottom: 28px;
   margin-left: -$padding-mobile;
+
+  @include retina {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-position: center -1px;
+  }
 
   @include tablet {
     background: none;
@@ -146,7 +162,19 @@
     padding: 16px 28px 16px 29px;
     margin-bottom: 65px;
   }
+
+  &:hover,
+  &:focus {
+    @include animation;
+    color: $primary;
+    background-color: $white;
+  }
+
+  &:active {
+    color: rgba($primary, 0.3);
+  }
 }
+
 
 .download__list {
   @include list-reset;
@@ -155,7 +183,7 @@
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  margin: 0 auto 15px;
+  margin: 0 auto 16px;
 
   @include tablet {
     position: relative;

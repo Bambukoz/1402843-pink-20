@@ -3,15 +3,45 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 40px;
+  padding-bottom: 33px;
 
   @include tablet {
     flex-direction: row;
     justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 40px;
   }
 
   @include desktop {
     @include page-wrapper-desktop;
     justify-content: space-between;
+    padding-top: 46px;
+    padding-bottom: 74px;
+  }
+
+  &--index {
+    @include desktop {
+      padding-top: 69px;
+    }
+  }
+
+  &--photo {
+    @include desktop {
+      padding-top: 98px;
+    }
+  }
+
+  &--form {
+    padding-top: 56px;
+
+    @include tablet {
+      padding-top: 60px;
+    }
+
+    @include desktop {
+      padding-top: 46px;
+    }
   }
 }
 
@@ -19,7 +49,7 @@
   margin-bottom: 30px;
 
   @include tablet {
-    margin-bottom: 34px;
+    margin-bottom: 0;
   }
 }
 
@@ -37,6 +67,21 @@
       display: block;
     }
   }
+
+  & svg {
+    fill: $secondary;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    @include animation;
+    fill: $primary;
+  }
+
+  &:active svg {
+    fill: $secondary;
+    opacity: 0.3;
+  }
 }
 
 .footer__social {
@@ -48,14 +93,12 @@
 
   @include tablet {
     width: 330px;
-    margin-top: 4px;
     margin-right: 14px;
+    margin-bottom: 0;
   }
 
   @include desktop {
-    margin-top: 6px;
     margin-right: 0;
-    margin-bottom: 31px;
   }
 }
 
@@ -91,11 +134,27 @@
   &--youtube {
     padding: 10px 19px;
   }
+
+  & svg {
+    fill: $primary;
+  }
+
+  &:hover,
+  &:focus {
+    @include animation;
+    border-color: rgba($secondary, 1);
+  }
+
+  &:active {
+    border-color: rgba($secondary, 0.1);
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
 .footer__copyright {
-  margin-bottom: 30px;
-
   @include tablet {
     width: 130px;
     display: flex;
@@ -111,14 +170,14 @@
   font-size: 14px;
   line-height: 18px;
   color: $secondary;
-  margin-right: 11px;
+  padding-right: 11px;
 
   @include tablet {
-    margin-right: 14px;
+    padding-right: 15px;
   }
 
   @include desktop {
-    margin-right: 13px;
+    padding-right: 13px;
     font-size: 18px;
   }
 }
@@ -130,5 +189,18 @@
 
   @include tablet {
     padding: 12px 0 0;
+  }
+
+  & svg {
+    fill: $primary;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $secondary;
+  }
+
+  &:active svg {
+    fill: rgba($secondary, 0.3);
   }
 }

@@ -1,53 +1,173 @@
 .popup {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 100%;
   display: none;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   border-radius: 1px;
   background-color: $white;
-  padding: 44px 22px 52px;
+  padding: 38px $padding-mobile 50px;
   z-index: 1000;
+
+  @include tablet {
+    width: 460px;
+    padding-top: 41px;
+    padding-bottom: 52px;
+  }
+
+  @include desktop {
+    width: 780px;
+    padding-bottom: 0;
+  }
+
+  &--success {
+    @include tablet {
+      padding-top: 43px;
+      padding-bottom: 0;
+    }
+
+    @include desktop {
+      padding-top: 42px;
+    }
+  }
 }
 
 .popup--open {
-  display: block;
+  position: fixed;
+  display: flex;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: center;
 }
 
 .popup__title {
   @include style-reset;
+  width: 198px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   text-align: center;
   color: $black;
-  padding: 0 15px;
-  margin: 0 0 37px;
+  margin: 0 0 25px;
+
+  @include tablet {
+    width: 260px;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 22px;
+  }
+
+  @include desktop {
+    width: 340px;
+  }
+
+  &--success {
+    width: 240px;
+
+    @include desktop {
+      width: 400px;
+      margin-bottom: 21px;
+    }
+  }
 }
 
 .popup__text {
   @include style-reset;
+  width: 280px;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
   color: $secondary;
-  margin: 0 0 50px;
+  margin: 0 0 41px;
+
+  @include tablet {
+    width: 320px;
+    font-size: 18px;
+    margin-bottom: 33px;
+  }
+
+  @include desktop {
+    width: 350px;
+    margin-bottom: 62px;
+  }
+
+  &--success {
+    margin-bottom: 34px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include desktop {
+      width: 380px;
+      margin-bottom: 39px;
+    }
+  }
 }
 
 .popup__wrapper {
+  width: calc(100% + 44px);
   background-color: $background-primary;
-  padding: 52px 22px;
-  margin: 0 -22px;
+  padding: 50px 22px;
+
+  @include tablet {
+    width: 460px;
+    padding-bottom: 46px;
+  }
+
+  @include desktop {
+    width: 780px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &--error {
+    background-color: transparent;
+    padding: 0 22px;
+
+    @include desktop {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: $background-primary;
+    }
+  }
 }
 
 .popup__close-btn {
-  width: 276px;
+  width: 100%;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   background-color: $green;
   color: $white;
-  border-radius: 1px;
-  padding: 22px 50px;
+  border-radius: 3px;
+  padding-top: 22px;
+  padding-bottom: 21px;
+  outline: none;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 300px;
+  }
+
+  &--success {
+    @include desktop {
+      width: 460px;
+    }
+
+    &:hover,
+    &:focus {
+      @include animation;
+      background-color: $green-hover;
+    }
+
+    &:active {
+      background-color: $green-hover;
+      color: rgba($white, 0.3);
+    }
+
+    &:disabled {
+      background-color: $border-white;
+    }
+  }
 }

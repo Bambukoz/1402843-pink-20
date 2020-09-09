@@ -6,9 +6,8 @@
 *.pdf
 *.psd
 *.sublime*
-node_modules/
 build/
+source/img/svg-inline/
+node_modules/
 npm-debug.*
-source/css/*.css
-source/css/*.map
 Thumbs.db

@@ -40,6 +40,7 @@
 
 .post__link {
   width: 100%;
+  line-height: 0;
 
   @include tablet {
     width: 300px;
@@ -95,14 +96,15 @@
   }
 
   &--panorama {
+    width: calc(100% - 40px);
+
     @include tablet {
-      width: 620px;
       min-height: 121px;
       margin-bottom: 50px;
     }
 
     @include desktop {
-      width: 940px;
+      width: calc(100% - 260px);
       min-height: 96px;
     }
   }
@@ -164,7 +166,7 @@
   display: block;
   height: 13px;
   width: 13px;
-  background-image: url("../../img/icon-heart.svg");
+  background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;

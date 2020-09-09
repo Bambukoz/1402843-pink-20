@@ -53,7 +53,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("../../img/bg-hit.svg");
+    background-image: url("../img/bg-hit.svg");
     background-repeat: no-repeat;
 
     @include tablet {
@@ -191,7 +191,7 @@
   }
 
   &--on {
-    background-image: url("../../img/icon-yes.svg");
+    background-image: url("../img/icon-yes.svg");
     background-size: 31px 21px;
     background-repeat: no-repeat;
     background-position: 0 3px;
@@ -200,7 +200,7 @@
   &--off {
     width: 27px;
     min-height: 27px;
-    background-image: url("../../img/icon-no.svg");
+    background-image: url("../img/icon-no.svg");
     background-size: 27px 27px;
     background-repeat: no-repeat;
   }

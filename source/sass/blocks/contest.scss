@@ -3,11 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 16px;
-
-  @include tablet {
-    margin-bottom: 24px;
-  }
 }
 
 .contest__lead {
@@ -16,7 +11,7 @@
   display: flex;
   justify-content: center;
   background-color: $background-secondary;
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -24,17 +19,35 @@
   padding-bottom: 44px;
   margin-bottom: 44px;
 
+  @include retina {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-position: center -3px;
+  }
+
   @include tablet {
-    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: $desktop-width auto;
     padding-top: 177px;
     padding-bottom: 59px;
     margin-bottom: 91px;
+
+    @include retina {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-position: center 2px;
+    }
   }
 
   @include desktop {
-    background-image: url("../../img/bg-back-desktop@1x.jpg");
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: 2560px auto;
+    background-position: center top;
     padding-top: 169px;
     padding-bottom: 89px;
+
+    @include retina {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-position: center 12px;
+    }
   }
 }
 
@@ -69,7 +82,7 @@
   @include tablet {
     width: 490px;
     font-size: 18px;
-    margin-bottom: 74px;
+    margin-bottom: 72px;
   }
 
   @include desktop {
