@@ -4,6 +4,16 @@
   background-color: rgba($black, 0.3);
   min-height: 69px;
 
+  @include tablet {
+    min-height: 110px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 $padding-desktop 9px;
+  }
+
   &--open,
   &--nojs {
     background-color: $secondary;
@@ -13,20 +23,8 @@
       background-color: rgba($black, 0.3);
     }
   }
-
-  @include tablet {
-    min-height: 110px;
-  }
-
-  @include desktop {
-    flex-direction: row;
-    justify-content: center;
-
-    @include desktop {
-      padding: 0 $padding-desktop 9px;
-    }
-  }
 }
+
 
 .page-header__top {
   display: flex;
@@ -81,6 +79,14 @@
   outline: none;
   margin: -5px 0 6px;
 
+  @include tablet {
+    margin: 8px -1px 0 0;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
   & span {
     position: absolute;
     width: 50px;
@@ -110,14 +116,6 @@
 
   &:active span {
     opacity: 0.3;
-  }
-
-  @include tablet {
-    margin: 8px -1px 0 0;
-  }
-
-  @include desktop {
-    display: none;
   }
 }
 
