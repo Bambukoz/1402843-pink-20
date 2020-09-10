@@ -181,23 +181,23 @@
 
 .download__list {
   @include list-reset;
-  width: 280px;
+  width: 204px;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: baseline;
   flex-wrap: wrap;
-  gap: 20px 35px;
   margin: 0 auto 16px;
 
   @include tablet {
+    width: 206px;
     position: relative;
-    margin: 0 8px 23px;
+    margin-bottom: 23px;
     align-items: center;
     z-index: 1;
   }
 
   @include desktop {
-    margin: 0 10px 44px;
+    margin-bottom: 44px;
     align-items: baseline;
   }
 }
