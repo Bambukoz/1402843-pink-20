@@ -1,6 +1,7 @@
 .logo {
   display: block;
   background-color: transparent;
+  outline: none;
 
   @include tablet {
     display: none;

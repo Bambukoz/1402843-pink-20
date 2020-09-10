@@ -187,6 +187,7 @@
   font-weight: 700;
   text-align: center;
   color: $black;
+  word-break: break-word;
   margin-bottom: 12px;
 
   @include tablet {

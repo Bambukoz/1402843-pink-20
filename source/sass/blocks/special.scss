@@ -10,7 +10,7 @@
     position: relative;
     padding-left: 330px;
     padding-bottom: 40px;
-    margin: 0 auto 81px;
+    margin: 0 auto 82px;
   }
 
   @include desktop {
@@ -19,7 +19,7 @@
     flex-direction: row;
     justify-content: center;
     background-color: $background-primary;
-    padding-bottom: 67px;
+    padding-bottom: 59px;
     margin-bottom: 72px;
   }
 }
@@ -30,8 +30,7 @@
   left: 20px;
 
   @include desktop {
-    width: 298px;
-    height: 345px;
+    width: 100%;
     position: static;
     margin-right: 71px;
   }
@@ -51,7 +50,7 @@
   padding-top: 43px;
 
   @include desktop {
-    padding-top: 48px;
+    padding-top: 40px;
     margin-right: 43px;
   }
 }
@@ -65,7 +64,7 @@
   margin-bottom: 9px;
 
   @include desktop {
-    width: 100%;
+    width: 526px;
     margin-bottom: 22px;
   }
 }
@@ -75,7 +74,7 @@
   width: 310px;
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
   @include desktop {
     width: 526px;
@@ -86,12 +85,14 @@
 }
 
 .special__link {
+  display: block;
   font-size: 14px;
   line-height: 24px;
   text-decoration-line: underline;
   color: $primary;
 
   @include desktop {
+    width: 526px;
     font-size: 18px;
     line-height: 30px;
   }

@@ -123,6 +123,12 @@
   @include tablet {
     margin: 0 10px;
   }
+
+  &--panorama {
+    @include tablet {
+      padding-right: 125px;
+    }
+  }
 }
 
 .post__time {
