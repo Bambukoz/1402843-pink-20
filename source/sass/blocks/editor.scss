@@ -44,53 +44,73 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding-top: 1px;
 
   @include tablet {
     width: 320px;
     flex-wrap: wrap;
     min-height: 200px;
-    padding-left: 36px;
+    padding-left: 34px;
   }
 
   @include desktop {
     flex-direction: row;
     width: 500px;
-    padding-left: 90px;
+    padding-left: 87px;
   }
 }
 
 .editor__toggles {
+  @include page-wrapper-mobile;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  padding-left: 20px;
-  padding-right: 26px;
+  padding-bottom: 29px;
+  margin-bottom: 38px;
 
   @include tablet {
-    width: 24px;
-    min-height: 162px;
-    position: absolute;
-    top: 9px;
-    left: 48px;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
     padding-right: 0;
     padding-left: 0;
+    padding-bottom: 12px;
+    margin-bottom: 67px;
     cursor: default;
   }
 
   @include desktop {
-    width: 44px;
-    min-height: 189px;
-    top: -4px;
-    left: 88px;
+    padding-bottom: 23px;
+    margin-bottom: 144px;
   }
 }
 
-.editor__icon-btn {
+.editor__range-labels {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 35px;
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 7px;
+    padding-left: 9px;
+    margin: 0;
+  }
+
+  @include desktop {
+    width: 48px;
+    padding-top: 0;
+    padding-left: 1px;
+  }
+}
+
+.editor__label {
+  display: block;
   width: 48px;
-  height: 48px;
+  min-height: 32px;
   border: none;
   background-color: transparent;
   font-size: 0;
@@ -99,22 +119,19 @@
   outline: none;
 
   @include tablet {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 47px;
+    margin-bottom: 42px;
   }
 
   @include desktop {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
   }
 
-  &--contrast {
+  &:last-child {
     @include tablet {
       margin-bottom: 0;
     }
   }
+
 
   & svg {
     fill: rgba($secondary, 0.3);
@@ -126,8 +143,8 @@
     }
 
     @include desktop {
-      width: 48px;
-      height: 44px;
+      width: 50px;
+      height: 43px;
     }
   }
 
@@ -135,6 +152,10 @@
   &:focus svg {
     @include animation;
     fill: rgba($secondary, 0.5);
+
+    @include tablet {
+      fill: $primary;
+    }
   }
 
   &--active svg {
@@ -159,49 +180,84 @@
   }
 }
 
-.editor__inputs {
+.editor__range-inputs {
   width: 100%;
-  min-height: 75px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 36px;
-
-  @include tablet {
-    min-height: 190px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 9px 1px 18px 47px;
-    margin-bottom: 75px;
-  }
-
-  @include desktop {
-    padding-left: 62px;
-    margin-bottom: 154px;
-  }
-}
-
-.editor__input {
-  display: none;
-  position: absolute;
-  top: 85px;
-  left: 50%;
-  transform: translateX(-50%);
+  padding-bottom: 6px;
+  padding-top: 6px;
 
   @include tablet {
     display: flex;
-    align-items: center;
-    position: relative;
-    top: auto;
-    left: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 19px 18px 0 0;
+  }
+
+  @include desktop {
+    padding-left: 47px;
+  }
+}
+
+.editor__input-range {
+  display: none;
+  position: relative;
+  appearance: none;
+  width: 240px;
+  height: 2px;
+  background-color: $secondary;
+  outline: none;
+
+  @include tablet {
+    display: block;
     width: 202px;
-    height: 20px;
-    transform: none;
+    margin-bottom: 70px;
   }
 
   @include desktop {
     width: 288px;
+  }
+
+  &:last-child {
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &--active {
+    display: block;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    height: 14px;
+    width: 14px;
+    background-color: $white;
+    border: 2px solid $primary;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      @include animation;
+      background-color: $primary;
+    }
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    height: 14px;
+    width: 14px;
+    background-color: $white;
+    border: 2px solid $primary;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      @include animation;
+      background-color: $primary;
+    }
   }
 
   &::after {
@@ -209,115 +265,25 @@
     width: 659px;
     height: 1px;
     position: absolute;
-    bottom: -35px;
+    bottom: -36px;
     left: -211px;
     background-color: rgba($secondary, 0.1);
 
     @include tablet {
-      width: 275px;
-      bottom: -26px;
+      width: calc(100% + 73px);
       left: -55px;
     }
 
     @include desktop {
-      width: 410px;
+      width: calc(100% + 122px);
       left: -92px;
     }
   }
 
-  &--active {
-    display: block;
-
-    @include tablet {
-      display: flex;
-    }
-  }
-
-  &--fill {
-    @include tablet {
-      margin-top: 3px;
-    }
-  }
-
-  &--contrast::after {
+  &:last-child::after {
     @include desktop {
-      display: none;
+      content: none;
     }
-  }
-}
-
-.editor__input-range {
-  position: relative;
-  width: 240px;
-  height: 2px;
-  background-color: $secondary;
-
-  @include tablet {
-    width: 202px;
-  }
-
-  @include desktop {
-    width: 288px;
-  }
-}
-
-.editor__input-btn {
-  @include btn-reset;
-  position: absolute;
-  top: -5px;
-  left: 81%;
-  height: 14px;
-  width: 14px;
-  background-color: $white;
-  border: 2px solid $primary;
-  border-radius: 50%;
-  font-size: 0;
-  line-height: 0;
-  padding: 0;
-
-  @include tablet {
-    top: 4px;
-  }
-
-  @include desktop {
-    top: 3px;
-  }
-
-  &--crop {
-    @include tablet {
-      left: 72%;
-    }
-
-    @include desktop {
-      left: 24%;
-    }
-  }
-
-  &--fill {
-    @include tablet {
-      left: 13%;
-    }
-
-    @include desktop {
-      left: 86%;
-    }
-  }
-
-  &--contrast {
-    @include tablet {
-      left: 48%;
-    }
-
-    @include desktop {
-      left: 56%;
-    }
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    @include animation;
-    background-color: $primary;
   }
 }
 
@@ -349,7 +315,7 @@
 
     @include desktop {
       margin-bottom: 0;
-      margin-right: 44px;
+      margin-right: 42px;
     }
 
     &:hover,

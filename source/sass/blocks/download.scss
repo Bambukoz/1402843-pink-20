@@ -74,6 +74,7 @@
   }
 
   @include tablet {
+    position: relative;
     background: none;
     padding-top: 49px;
     margin: 0;
@@ -95,14 +96,16 @@
     width: 700px;
     height: 498px;
     position: absolute;
-    right: -20px;
-    bottom: 47px;
+    left: -40px;
+    bottom: -303px;
     z-index: 0;
   }
 
   @include desktop {
     width: 1074px;
     height: 598px;
+    left: 16px;
+    bottom: -358px;
   }
 }
 
@@ -178,39 +181,24 @@
 
 .download__list {
   @include list-reset;
-  width: 280px;
+  width: 204px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: baseline;
   flex-wrap: wrap;
   margin: 0 auto 16px;
 
   @include tablet {
+    width: 206px;
     position: relative;
-    margin: 0 8px 23px;
+    margin-bottom: 23px;
     align-items: center;
     z-index: 1;
   }
 
   @include desktop {
-    margin: 0 10px 44px;
+    margin-bottom: 44px;
     align-items: baseline;
-  }
-}
-
-.download__item {
-  padding: 0 38px;
-
-  &:first-child {
-    padding-right: 0;
-  }
-
-  &:nth-child(2) {
-    padding: 0;
-  }
-
-  &:last-child {
-    padding-left: 0;
   }
 }
 
