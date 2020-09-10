@@ -31,7 +31,7 @@ const css = () => {
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('build/css'))
     .pipe(sync.stream());
-}
+};
 
 exports.css = css;
 
@@ -49,7 +49,7 @@ const images = () => {
       imageMin.svgo(),
     ]))
     .pipe(gulp.dest('source/img'));
-}
+};
 
 exports.images = images;
 
@@ -61,7 +61,7 @@ const webp = () => {
       quality: 90
     }))
     .pipe(gulp.dest('source/img/webp'));
-}
+};
 
 exports.webp = webp;
 
@@ -72,7 +72,7 @@ const sprite = () => {
     .pipe(svgStore())
     .pipe(rename('svg-sprite.svg'))
     .pipe(gulp.dest('source/img'));
-}
+};
 
 exports.sprite = sprite;
 
@@ -84,8 +84,9 @@ const html = () => {
       removeComments: true,
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest('build'));
-}
+    .pipe(gulp.dest('build'))
+    .pipe(sync.stream());
+};
 
 exports.html = html;
 
@@ -99,22 +100,21 @@ const jsMin = () => {
       }
     }))
     .pipe(gulp.dest("build/js"));
-}
+};
 
 exports.jsMin = jsMin;
-
 
 // Copy
 
 const copy = () => {
   return gulp.src([
-    'source/fonts/**/*',
-    'source/img/**/*',
-  ], {
-    base: 'source'
-  })
+      'source/fonts/**/*',
+      'source/img/**/*',
+    ], {
+      base: 'source'
+    })
     .pipe(gulp.dest('build'));
-}
+};
 
 exports.copy = copy;
 
@@ -122,7 +122,7 @@ exports.copy = copy;
 
 const clean = () => {
   return del('build');
-}
+};
 
 exports.clean = clean;
 
@@ -138,7 +138,7 @@ const server = (done) => {
     ui: false,
   });
   done();
-}
+};
 
 exports.server = server;
 
@@ -146,8 +146,8 @@ exports.server = server;
 
 const watch = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series('css'));
-  gulp.watch('source/js/**/*.js', gulp.series('jsMin'))
-  gulp.watch('source/*.html').on('change', sync.reload);
+  gulp.watch('source/js/**/*.js', gulp.series('jsMin'));
+  gulp.watch('source/*.html', gulp.series('html'));
 };
 
 const build = gulp.series(
@@ -160,7 +160,7 @@ const build = gulp.series(
 
 exports.build = build;
 
-//
+// Start
 
 exports.default = gulp.series(
   gulp.parallel(

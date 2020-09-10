@@ -73,6 +73,11 @@
   display: block;
 }
 
+.option-group__input[type="checkbox"] ~ .option-group__label {
+  line-height: 39px;
+  padding-left: 59px;
+}
+
 .option-group__input[type="checkbox"] ~ .option-group__element {
   position: absolute;
   top: 0;
@@ -83,26 +88,36 @@
   border: 2px solid $border-white;
   border-radius: 1px;
   outline: none;
+  cursor: pointer;
 
   &:hover {
+    @include animation;
     border-color: $secondary;
   }
 
-  &:focus,
   &:active {
     border-color: $primary;
   }
-}
-
-.option-group__input[type="checkbox"] ~ .option-group__label {
-  line-height: 39px;
-  padding-left: 59px;
 }
 
 .option-group__input[type="checkbox"]:checked ~ .option-group__element {
   background-image: url("../img/icon-checked.svg");
   background-repeat: no-repeat;
   background-position: 7px 9px;
+}
+
+.option-group__input[type="checkbox"]:focus + .option-group__element {
+  @include animation;
+  border-color: $primary;
+}
+
+.option-group__input[type="radio"] ~ .option-group__label {
+  line-height: 40px;
+  padding-left: 70px;
+
+  @include tablet {
+    padding-left: 61px;
+  }
 }
 
 .option-group__input[type="radio"] ~ .option-group__element {
@@ -115,23 +130,15 @@
   border: 2px solid $border-white;
   border-radius: 50%;
   outline: none;
+  cursor: pointer;
 
   &:hover {
+    @include animation;
     border-color: $secondary;
   }
 
-  &:focus,
   &:active {
     border-color: $primary;
-  }
-}
-
-.option-group__input[type="radio"] ~ .option-group__label {
-  line-height: 40px;
-  padding-left: 70px;
-
-  @include tablet {
-    padding-left: 61px;
   }
 }
 
@@ -140,6 +147,11 @@
   background-repeat: no-repeat;
   background-size: 35px;
   background-position: center;
+}
+
+.option-group__input[type="radio"]:focus + .option-group__element {
+  @include animation;
+  border-color: $primary;
 }
 
 .option-group__label {

@@ -14,8 +14,8 @@
 
   @include desktop {
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 15px 0;
   }
 }
 
@@ -27,6 +27,11 @@
   @include desktop {
     width: auto;
     border: none;
+    margin-left: 79px;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
 

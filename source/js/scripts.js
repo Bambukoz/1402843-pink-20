@@ -56,15 +56,15 @@ var successClose = popups.querySelector(Selector.SUCCESS_CLOSE);
   form.addEventListener('submit', function (evt) {
     evt.preventDefault();
     if (!lastName.value || !firstName.value || !email.value) {
-      popupError.classList.toggle(Class.POPUP_OPEN);
+      popupError.classList.toggle(Class.POPUP_OPEN)
     } else {
-      popupSuccess.classList.toggle(Class.POPUP_OPEN);
-    };
+      popupSuccess.classList.toggle(Class.POPUP_OPEN)
+    }
   });
   errorClose.addEventListener('click', function () {
-    popupError.classList.remove(Class.POPUP_OPEN);
+    popupError.classList.remove(Class.POPUP_OPEN)
   });
   successClose.addEventListener('click', function () {
-    popupSuccess.classList.remove(Class.POPUP_OPEN);
+    popupSuccess.classList.remove(Class.POPUP_OPEN)
   });
 })();
