@@ -3,30 +3,6 @@
   background-color: transparent;
   outline: none;
 
-  @include tablet {
-    display: none;
-  }
-
-  &--tablet {
-    display: none;
-
-    @include tablet {
-      display: block;
-    }
-
-    @include desktop {
-      display: none;
-    }
-  }
-
-  &--desktop {
-    display: none;
-
-    @include desktop {
-      display: block;
-    }
-  }
-
   & svg {
     fill: $white;
   }
@@ -40,5 +16,34 @@
   &:active svg {
     fill: $white;
     opacity: 0.3;
+  }
+}
+
+.logo__mobile {
+  display: block;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.logo__tablet {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.logo__desktop {
+  display: none;
+
+  @include desktop {
+    display: block;
+    margin-bottom: 7px;
   }
 }

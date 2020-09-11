@@ -30,11 +30,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 23px $padding-mobile 16px;
+  padding: 23px $padding-mobile 24px;
 
   @include tablet {
     padding: 27px $padding-mobile 15px;
-    margin-bottom: 19px;
+    margin-bottom: 26px;
   }
 
   @include desktop {
@@ -77,7 +77,7 @@
   line-height: 0;
   background-color: transparent;
   outline: none;
-  margin: -5px 0 6px;
+  margin: -5px 0 -4px;
 
   @include tablet {
     margin: 8px -1px 0 0;

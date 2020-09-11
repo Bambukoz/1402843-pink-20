@@ -49,27 +49,15 @@
 }
 
 .footer__logo {
-  margin-bottom: 30px;
+  margin-bottom: 37px;
 
   @include tablet {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 }
 
 .footer__link {
   display: block;
-
-  @include desktop {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-
-    @include desktop {
-      display: block;
-    }
-  }
 
   & svg {
     fill: $secondary;
@@ -84,6 +72,22 @@
   &:active svg {
     fill: $secondary;
     opacity: 0.3;
+  }
+}
+
+.footer__logo-mobile {
+  display: block;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.footer__logo-desktop {
+  display: none;
+
+  @include desktop {
+    display: block;
   }
 }
 

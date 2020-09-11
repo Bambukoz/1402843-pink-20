@@ -11,7 +11,7 @@
     background-repeat: no-repeat;
     background-position: center -2px;
     background-size: cover;
-    padding-bottom: 78px;
+    padding-bottom: 79px;
 
     @include retina {
       background-image: url("../img/bg-back-tablet@2x.jpg");
@@ -97,7 +97,7 @@
     height: 498px;
     position: absolute;
     left: -40px;
-    bottom: -303px;
+    bottom: -304px;
     z-index: 0;
   }
 

@@ -109,7 +109,8 @@ exports.jsMin = jsMin;
 const copy = () => {
   return gulp.src([
       'source/fonts/**/*',
-      'source/img/**/*',
+      'source/css/**/{style.css,style.css.map}',
+      'source/img/**/*'
     ], {
       base: 'source'
     })

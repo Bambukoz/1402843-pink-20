@@ -89,15 +89,13 @@
     }
 
     @include desktop {
-      padding-top: 42px;
-    }
-
-    @include desktop {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      flex-wrap: wrap;
       grid-row: 2;
       grid-column: 1/-1;
+      padding-top: 42px;
       padding-bottom: 13px;
       margin-bottom: 65px;
     }
@@ -177,6 +175,7 @@
 
     @include desktop {
       width: 375px;
+      flex-shrink: 0;
       margin-bottom: 0;
     }
   }
